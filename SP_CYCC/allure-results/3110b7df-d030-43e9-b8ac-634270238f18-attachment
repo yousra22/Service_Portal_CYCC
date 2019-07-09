@@ -1,0 +1,10 @@
+
+################################################################################################################################################
+Starting Execution:	[1 out of 1] test cases in the current suite
+Test Method:		[SP_CYCC.CallyaCustomerInfo_Test.navigateToURLandLogin]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @04-07-2019 10:24:42.0372 AM
+[ReportManager] Successfully created attachment [Screenshot - 1562228698869_navigateToURLandLogin_identifyUniqueElement_failed] @04-07-2019 10:24:58.0896 AM
+[ReportManager] [identifyUniqueElement] failed. With the following test data [zero elements found matching this locator [By.name: username].]. @04-07-2019 10:24:59.0663 AM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @04-07-2019 10:24:59.0697 AM
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @04-07-2019 10:25:01.0093 AM

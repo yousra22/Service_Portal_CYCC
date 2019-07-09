@@ -1,0 +1,30 @@
+
+################################################################################################################################################
+Detected SHAFT Engine Version: [2.3.20180305]
+################################################################################################################################################
+[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @04-07-2019 10:27:33.0024 AM
+[ReportManager] Successfully Opened Google Chrome. @04-07-2019 10:27:41.0001 AM
+[ReportManager] Initial window size: (1050, 840) @04-07-2019 10:27:42.0362 AM
+[ReportManager] Window size after SWD Maximize: (1616, 876) @04-07-2019 10:27:42.0513 AM
+[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @04-07-2019 10:27:45.0152 AM
+
+################################################################################################################################################
+Starting Execution:	[1 out of 1] test cases in the current suite
+Test Method:		[SP_CYCC.CallyaCustomerInfo_Test.navigateToURLandLogin]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @04-07-2019 10:27:53.0869 AM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @04-07-2019 10:27:56.0053 AM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @04-07-2019 10:27:58.0094 AM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @04-07-2019 10:28:02.0384 AM
+[ReportManager] Element Action [click] successfully performed. @04-07-2019 10:28:05.0304 AM
+[ReportManager] Element Action [click] successfully performed. @04-07-2019 10:28:08.0103 AM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @04-07-2019 10:28:09.0224 AM
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @04-07-2019 10:28:12.0550 AM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @04-07-2019 10:28:12.0550 AM
+[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @04-07-2019 10:28:12.0692 AM
+[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @04-07-2019 10:28:13.0320 AM
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################

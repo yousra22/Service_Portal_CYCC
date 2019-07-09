@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="17" total="18" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[
+################################################################################################################################################
+Detected SHAFT Engine Version: [2.3.20180305]
+################################################################################################################################################]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @04-07-2019 10:27:33.0024 AM]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Successfully Opened Google Chrome. @04-07-2019 10:27:41.0001 AM]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @04-07-2019 10:27:45.0152 AM]]>
+    </line>
+    <line>
+      <![CDATA[
+################################################################################################################################################
+Starting Execution:[1 out of 1] test cases in the current suite
+Test Method:[SP_CYCC.CallyaCustomerInfo_Test.navigateToURLandLogin]
+################################################################################################################################################]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @04-07-2019 10:27:53.0869 AM]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @04-07-2019 10:27:56.0053 AM]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @04-07-2019 10:27:58.0094 AM]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @04-07-2019 10:28:02.0384 AM]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Element Action [click] successfully performed. @04-07-2019 10:28:05.0304 AM]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Element Action [click] successfully performed. @04-07-2019 10:28:08.0103 AM]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @04-07-2019 10:28:12.0550 AM]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @04-07-2019 10:28:12.0550 AM]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @04-07-2019 10:28:12.0692 AM]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @04-07-2019 10:28:13.0320 AM]]>
+    </line>
+    <line>
+      <![CDATA[
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################]]>
+    </line>
+    <line>
+      <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Full Execution log] @04-07-2019 10:28:13.0437 AM]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="41668" started-at="2019-07-04T08:27:32Z" finished-at="2019-07-04T08:28:14Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="41668" started-at="2019-07-04T08:27:32Z" finished-at="2019-07-04T08:28:14Z">
+      <class name="SP_CYCC.CallyaCustomerInfo_Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:SP_CYCC.CallyaCustomerInfo_Test@1a1da881]" name="beforeClass" is-config="true" duration-ms="12465" started-at="2019-07-04T08:27:32Z" finished-at="2019-07-04T08:27:45Z">
+          <reporter-output>
+            <line>
+              <![CDATA[[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @04-07-2019 10:27:33.0024 AM]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Successfully Opened Google Chrome. @04-07-2019 10:27:41.0001 AM]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @04-07-2019 10:27:45.0152 AM]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="navigateToURLandLogin()[pri:0, instance:SP_CYCC.CallyaCustomerInfo_Test@1a1da881]" name="navigateToURLandLogin" duration-ms="22915" started-at="2019-07-04T08:27:45Z" finished-at="2019-07-04T08:28:08Z">
+          <reporter-output>
+            <line>
+              <![CDATA[
+################################################################################################################################################
+Starting Execution:[1 out of 1] test cases in the current suite
+Test Method:[SP_CYCC.CallyaCustomerInfo_Test.navigateToURLandLogin]
+################################################################################################################################################]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @04-07-2019 10:27:53.0869 AM]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @04-07-2019 10:27:56.0053 AM]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @04-07-2019 10:27:58.0094 AM]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @04-07-2019 10:28:02.0384 AM]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Element Action [click] successfully performed. @04-07-2019 10:28:05.0304 AM]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Element Action [click] successfully performed. @04-07-2019 10:28:08.0103 AM]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @04-07-2019 10:28:12.0550 AM]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @04-07-2019 10:28:12.0550 AM]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @04-07-2019 10:28:12.0692 AM]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @04-07-2019 10:28:13.0320 AM]]>
+            </line>
+            <line>
+              <![CDATA[
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################]]>
+            </line>
+            <line>
+              <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Full Execution log] @04-07-2019 10:28:13.0437 AM]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- navigateToURLandLogin -->
+      </class> <!-- SP_CYCC.CallyaCustomerInfo_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

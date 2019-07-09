@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 04 10:27:32 EET 2019</td>
+</tr>
+<tr><td>Total time:</td><td>41 seconds (41668 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='SP_CYCC.CallyaCustomerInfo_Test.navigateToURLandLogin()'><b>navigateToURLandLogin</b><br>Test class: SP_CYCC.CallyaCustomerInfo_Test<br/>
+<a href="#Output-313334570" onClick='toggleBox("Output-313334570", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-313334570" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-313334570">
+
+################################################################################################################################################
+Starting Execution:	[1 out of 1] test cases in the current suite
+Test Method:		[SP_CYCC.CallyaCustomerInfo_Test.navigateToURLandLogin]
+################################################################################################################################################<br/>
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @04-07-2019 10:27:53.0869 AM<br/>
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @04-07-2019 10:27:56.0053 AM<br/>
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @04-07-2019 10:27:58.0094 AM<br/>
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @04-07-2019 10:28:02.0384 AM<br/>
+[ReportManager] Element Action [click] successfully performed. @04-07-2019 10:28:05.0304 AM<br/>
+[ReportManager] Element Action [click] successfully performed. @04-07-2019 10:28:08.0103 AM<br/>
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @04-07-2019 10:28:12.0550 AM<br/>
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @04-07-2019 10:28:12.0550 AM<br/>
+[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @04-07-2019 10:28:12.0692 AM<br/>
+[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @04-07-2019 10:28:13.0320 AM<br/>
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################<br/>
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Full Execution log] @04-07-2019 10:28:13.0437 AM<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>SP_CYCC.CallyaCustomerInfo_Test@1a1da881</td></tr>
+</table><p>
+</body>
+</html>
