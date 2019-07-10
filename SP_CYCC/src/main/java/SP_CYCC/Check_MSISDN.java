@@ -13,7 +13,7 @@ public class Check_MSISDN {
 	// WebElements
 	By Msisdn_TextBox = By.id("exampleInputEmail3");
 	By button_CheckMSISDN = By.xpath("//button[@ng-click='validateMSISDN()']");
-	By msisdnAbrufen_button = By.xpath("//form[@id= 'checkNumberForm']/button[@ng-click='getGensisMSISDN()']");
+	By button_MSISDNabrufen= By.xpath("//form[@id= 'checkNumberForm']/button[@ng-click='getGensisMSISDN()']");
 
 	// Constructor
 	public Check_MSISDN(WebDriver driver) {
@@ -31,7 +31,7 @@ public class Check_MSISDN {
 
 
 	public void genesis_MSISDN() {
-		ElementActions.keyPress(driver, msisdnAbrufen_button, "Enter");
+		ElementActions.keyPress(driver, button_MSISDNabrufen, "Enter");
 
 	}
 
