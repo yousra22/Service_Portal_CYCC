@@ -1,0 +1,10 @@
+
+################################################################################################################################################
+Starting Execution:	[1 out of 3] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @10-07-2019 12:04:53.0113 PM
+[ReportManager] Successfully created attachment [Screenshot - 1562753109720_navigateToURLandLogin_identifyUniqueElement_failed] @10-07-2019 12:05:09.0746 PM
+[ReportManager] [identifyUniqueElement] failed. With the following test data [zero elements found matching this locator [By.name: username].]. @10-07-2019 12:05:10.0407 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 12:05:10.0447 PM
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @10-07-2019 12:05:11.0777 PM

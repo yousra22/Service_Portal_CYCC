@@ -1,0 +1,18 @@
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_BalanceTransfers_Feilds]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @10-07-2019 14:03:38.0993 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 14:03:40.0621 PM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @10-07-2019 14:03:49.0982 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:03:57.0830 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 14:04:16.0085 PM
+[ReportManager] Element Action [isElementClickable] successfully performed. @10-07-2019 14:04:17.0543 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 14:04:28.0012 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:04:31.0358 PM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Sperrsoc gesetzt], actualValue [Sperrsoc gesetzt], comparisonType [1], and assertionType [true]. @10-07-2019 14:04:32.0245 PM
+[ReportManager] Assertion Passed; actual value [Sperrsoc gesetzt] does match expected value [Sperrsoc gesetzt]. @10-07-2019 14:04:32.0257 PM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Nutzungsvoraussetzungen nicht erfÃ¼llt], actualValue [Nutzungsvoraussetzungen nicht erfüllt], comparisonType [1], and assertionType [true]. @10-07-2019 14:04:32.0257 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 14:04:32.0269 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_BalanceTransfers_Feilds] @10-07-2019 14:04:33.0464 PM

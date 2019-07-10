@@ -1,0 +1,62 @@
+
+################################################################################################################################################
+Detected SHAFT Engine Version: [2.3.20180305]
+################################################################################################################################################
+[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @10-07-2019 13:24:22.0695 PM
+[ReportManager] Successfully Opened Google Chrome. @10-07-2019 13:24:29.0266 PM
+[ReportManager] Initial window size: (1050, 840) @10-07-2019 13:24:30.0527 PM
+[ReportManager] Window size after SWD Maximize: (1616, 876) @10-07-2019 13:24:30.0681 PM
+[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @10-07-2019 13:24:32.0941 PM
+
+################################################################################################################################################
+Starting Execution:	[1 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @10-07-2019 13:24:40.0176 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 13:24:41.0935 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 13:24:43.0645 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 13:24:49.0176 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:24:51.0737 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:24:54.0314 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 13:24:55.0433 PM
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @10-07-2019 13:24:58.0691 PM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 13:24:58.0692 PM
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_Buchungsübersicht_tab]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @10-07-2019 13:25:12.0927 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 13:25:14.0454 PM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @10-07-2019 13:25:35.0707 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 13:25:49.0316 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:25:51.0848 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 13:26:02.0214 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:26:05.0096 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 13:26:15.0489 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:26:17.0730 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 13:26:28.0288 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:26:30.0498 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 13:26:41.0329 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:26:43.0562 PM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Buchungen], actualValue [Buchungen], comparisonType [1], and assertionType [true]. @10-07-2019 13:26:43.0857 PM
+[ReportManager] Assertion Passed; actual value [Buchungen] does match expected value [Buchungen]. @10-07-2019 13:26:43.0865 PM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Flex Einstellungen], actualValue [Flex Einstellungen], comparisonType [1], and assertionType [true]. @10-07-2019 13:26:43.0866 PM
+[ReportManager] Assertion Passed; actual value [Flex Einstellungen] does match expected value [Flex Einstellungen]. @10-07-2019 13:26:43.0866 PM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Stornierungen], actualValue [Stornierungen], comparisonType [1], and assertionType [true]. @10-07-2019 13:26:43.0867 PM
+[ReportManager] Assertion Passed; actual value [Stornierungen] does match expected value [Stornierungen]. @10-07-2019 13:26:43.0868 PM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Tarifwechsel], actualValue [Tarifwechsel], comparisonType [1], and assertionType [true]. @10-07-2019 13:26:43.0868 PM
+[ReportManager] Assertion Passed; actual value [Tarifwechsel] does match expected value [Tarifwechsel]. @10-07-2019 13:26:43.0869 PM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Vermerke], actualValue [Vermerke], comparisonType [1], and assertionType [true]. @10-07-2019 13:26:43.0869 PM
+[ReportManager] Assertion Passed; actual value [Vermerke] does match expected value [Vermerke]. @10-07-2019 13:26:43.0871 PM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Alle KanÃ¤le], actualValue [Alle Kanäle], comparisonType [1], and assertionType [true]. @10-07-2019 13:26:43.0872 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 13:26:43.0882 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_Buchungsübersicht_tab] @10-07-2019 13:26:44.0740 PM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 13:26:44.0741 PM
+[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @10-07-2019 13:26:45.0146 PM
+[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @10-07-2019 13:26:46.0012 PM
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################

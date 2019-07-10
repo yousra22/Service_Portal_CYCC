@@ -1,0 +1,9 @@
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_GensisMSISDN_link]
+################################################################################################################################################
+[ReportManager] Successfully created attachment [Screenshot - 1562755374777_assert_GensisMSISDN_link_identifyUniqueElement_failed] @10-07-2019 12:42:54.0796 PM
+[ReportManager] [identifyUniqueElement] failed. With the following test data [zero elements found matching this locator [By.xpath: //button[@ng-click='genesysReload()']].]. @10-07-2019 12:42:55.0507 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 12:42:55.0530 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_GensisMSISDN_link] @10-07-2019 12:42:56.0706 PM

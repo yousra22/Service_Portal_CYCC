@@ -1,0 +1,13 @@
+
+################################################################################################################################################
+Starting Execution:	[2 out of 3] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_KiasPopup_displayed]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @10-07-2019 12:06:53.0676 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 12:06:55.0451 PM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (15) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @10-07-2019 12:07:04.0587 PM
+[ReportManager] Assertion [assertElementExists] is being performed. @10-07-2019 12:07:04.0592 PM
+[ReportManager] Successfully created attachment [Screenshot - 1562753226390_assert_KiasPopup_displayed_assertElementExists_passed] @10-07-2019 12:07:06.0496 PM
+[ReportManager] Assertion Passed; element exists and is unique. Locator [By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content']]. @10-07-2019 12:07:07.0223 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 12:07:07.0238 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_KiasPopup_displayed] @10-07-2019 12:07:08.0502 PM

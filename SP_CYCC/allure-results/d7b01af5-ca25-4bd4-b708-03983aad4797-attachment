@@ -1,0 +1,15 @@
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_wunschtarif_ChangeTariff_checksuccesMessage]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @10-07-2019 13:11:54.0559 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 13:11:56.0076 PM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @10-07-2019 13:12:17.0433 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:12:21.0406 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:12:24.0457 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 13:12:37.0997 PM
+[ReportManager] Successfully created attachment [Screenshot - 1562757158481_assert_wunschtarif_ChangeTariff_checksuccesMessage_identifyUniqueElement_failed] @10-07-2019 13:12:38.0499 PM
+[ReportManager] [identifyUniqueElement] failed. With the following test data [unique element matching this locator [By.xpath: (//*[@name='radioUnit'])[2]] is not visible.]. @10-07-2019 13:12:39.0084 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 13:12:39.0102 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_wunschtarif_ChangeTariff_checksuccesMessage] @10-07-2019 13:12:40.0106 PM

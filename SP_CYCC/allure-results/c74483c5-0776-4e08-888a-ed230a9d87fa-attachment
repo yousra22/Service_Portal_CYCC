@@ -1,0 +1,45 @@
+
+################################################################################################################################################
+Detected SHAFT Engine Version: [2.3.20180305]
+################################################################################################################################################
+[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @10-07-2019 12:21:20.0503 PM
+[ReportManager] Successfully Opened Google Chrome. @10-07-2019 12:21:28.0286 PM
+[ReportManager] Initial window size: (1050, 840) @10-07-2019 12:21:29.0690 PM
+[ReportManager] Window size after SWD Maximize: (1616, 876) @10-07-2019 12:21:29.0857 PM
+[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @10-07-2019 12:21:32.0247 PM
+
+################################################################################################################################################
+Starting Execution:	[1 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @10-07-2019 12:21:40.0242 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 12:21:42.0396 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 12:21:44.0250 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 12:21:49.0969 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 12:21:52.0978 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 12:21:56.0110 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 12:21:57.0260 PM
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @10-07-2019 12:22:00.0429 PM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 12:22:00.0430 PM
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_MSISDN_Truncation]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [  491620491952  ]. @10-07-2019 12:22:13.0781 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 12:22:15.0501 PM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @10-07-2019 12:22:37.0036 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 12:22:41.0345 PM
+[ReportManager] Assertion [assertElementExists] is being performed. @10-07-2019 12:22:41.0350 PM
+[ReportManager] Successfully created attachment [Screenshot - 1562754162288_assert_MSISDN_Truncation_assertElementExists_passed] @10-07-2019 12:22:42.0328 PM
+[ReportManager] Assertion Passed; element exists and is unique. Locator [By.xpath: //div[@class ='white-content']//div[@class = 'result']//li[text()='491620491952']]. @10-07-2019 12:22:43.0107 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 12:22:43.0120 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_MSISDN_Truncation] @10-07-2019 12:22:44.0352 PM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 12:22:44.0352 PM
+[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @10-07-2019 12:22:44.0852 PM
+[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @10-07-2019 12:22:45.0802 PM
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################

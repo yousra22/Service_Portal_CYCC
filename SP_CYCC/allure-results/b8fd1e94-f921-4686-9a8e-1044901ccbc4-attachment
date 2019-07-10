@@ -1,0 +1,14 @@
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_NeueSuche_link]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://ecycc8.stweb.elabs.svcs.hpe.com/cycc/serviceportal/getCustomerType.do?MSISDN=491620491952&clearsession=true]. @10-07-2019 11:52:48.0163 AM
+[ReportManager] Element Action [isElementDisplayed] successfully performed. @10-07-2019 11:52:50.0079 AM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 11:53:00.0620 AM
+[ReportManager] Assertion [assertBrowserAttribute] is being performed for target attribute [currenturl]. @10-07-2019 11:53:00.0626 AM
+[ReportManager] Browser Action [getCurrentURL] successfully performed. With the following test data [https://ecycc8.stweb.elabs.svcs.hpe.com/cycc/serviceportal/callyaCustomerInfo.do]. @10-07-2019 11:53:01.0952 AM
+[ReportManager] Successfully created attachment [Screenshot - 1562752382488_assert_NeueSuche_link_assertBrowserAttribute_passed] @10-07-2019 11:53:02.0506 AM
+[ReportManager] Assertion Passed; actual value of [currenturl] does match expected value [cycc/serviceportal/callyaCustomerInfo.do]. @10-07-2019 11:53:03.0193 AM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 11:53:03.0203 AM
+[ReportManager] Successfully created attachment [Animated Gif - assert_NeueSuche_link] @10-07-2019 11:53:04.0347 AM

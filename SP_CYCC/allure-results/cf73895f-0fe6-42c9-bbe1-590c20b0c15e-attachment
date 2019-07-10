@@ -1,0 +1,18 @@
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_wunschtarif_activeButton_Disabled]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @10-07-2019 12:56:55.0630 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 12:56:57.0200 PM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @10-07-2019 12:57:18.0745 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 12:57:22.0825 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 12:57:31.0852 PM
+[ReportManager] Assertion [assertElementExists] is being performed. @10-07-2019 12:57:31.0857 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 12:57:42.0334 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 12:57:52.0972 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 12:58:03.0205 PM
+[ReportManager] Successfully created attachment [Screenshot - 1562756283847_assert_wunschtarif_activeButton_Disabled_assertElementExists_passed] @10-07-2019 12:58:03.0883 PM
+[ReportManager] Assertion Passed; element exists and is unique. Locator [By.xpath: (//a[@ng-disabled='activateButtonDisabled'])[1]]. @10-07-2019 12:58:04.0501 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 12:58:04.0508 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_wunschtarif_activeButton_Disabled] @10-07-2019 12:58:05.0729 PM

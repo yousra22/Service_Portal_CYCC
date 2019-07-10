@@ -1,0 +1,12 @@
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_MsisdnErnuetLaden_link]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [  491620491952  ]. @10-07-2019 12:37:33.0530 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 12:37:35.0138 PM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @10-07-2019 12:37:55.0294 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 12:38:03.0163 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 12:38:09.0684 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 12:38:09.0707 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_MsisdnErnuetLaden_link] @10-07-2019 12:38:11.0008 PM

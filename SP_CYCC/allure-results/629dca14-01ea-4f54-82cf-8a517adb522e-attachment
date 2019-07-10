@@ -1,0 +1,49 @@
+
+################################################################################################################################################
+Detected SHAFT Engine Version: [2.3.20180305]
+################################################################################################################################################
+[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @10-07-2019 12:15:24.0753 PM
+[ReportManager] Successfully Opened Google Chrome. @10-07-2019 12:15:32.0578 PM
+[ReportManager] Initial window size: (1050, 840) @10-07-2019 12:15:33.0903 PM
+[ReportManager] Window size after SWD Maximize: (1616, 876) @10-07-2019 12:15:34.0103 PM
+[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @10-07-2019 12:15:36.0536 PM
+
+################################################################################################################################################
+Starting Execution:	[1 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @10-07-2019 12:15:44.0494 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 12:15:46.0423 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 12:15:48.0314 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 12:15:52.0678 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 12:15:55.0721 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 12:15:58.0885 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 12:16:00.0015 PM
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @10-07-2019 12:16:03.0202 PM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 12:16:03.0204 PM
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_MSISDN_without49]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [1620491952]. @10-07-2019 12:16:19.0226 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 12:16:20.0976 PM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @10-07-2019 12:16:42.0513 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 12:16:55.0956 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 12:16:59.0466 PM
+[ReportManager] Assertion [assertElementExists] is being performed. @10-07-2019 12:16:59.0470 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 12:17:09.0908 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 12:17:20.0396 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 12:17:30.0911 PM
+[ReportManager] Successfully created attachment [Screenshot - 1562753851391_assert_MSISDN_without49_assertElementExists_passed] @10-07-2019 12:17:31.0438 PM
+[ReportManager] Assertion Passed; element exists and is unique. Locator [By.xpath: //div[@class ='white-content']//div[@class = 'result']//li[text()='491620491952']]. @10-07-2019 12:17:32.0032 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 12:17:32.0039 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_MSISDN_without49] @10-07-2019 12:17:33.0156 PM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 12:17:33.0156 PM
+[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @10-07-2019 12:17:33.0778 PM
+[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @10-07-2019 12:17:34.0999 PM
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################

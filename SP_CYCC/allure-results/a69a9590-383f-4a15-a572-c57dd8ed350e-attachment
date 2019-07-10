@@ -1,0 +1,12 @@
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_SessionTimer]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://ecycc8.stweb.elabs.svcs.hpe.com/cycc/serviceportal/getCustomerType.do?MSISDN=491620491952&clearsession=true]. @10-07-2019 11:43:49.0953 AM
+[ReportManager] Assertion [assertElementAttribute] is being performed for target attribute [text]. @10-07-2019 11:43:49.0961 AM
+[ReportManager] Element Action [getText] successfully performed. With the following test data [29:58  ]. @10-07-2019 11:43:52.0926 AM
+[ReportManager] Successfully created attachment [Screenshot - 1562751833637_assert_SessionTimer_assertElementAttribute_failed] @10-07-2019 11:43:53.0672 AM
+[ReportManager] Assertion Failed; actual value of [text] equals [29:58  ] which does not match expected value [29:59  ]. @10-07-2019 11:43:54.0429 AM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 11:43:54.0445 AM
+[ReportManager] Successfully created attachment [Animated Gif - assert_SessionTimer] @10-07-2019 11:43:55.0814 AM

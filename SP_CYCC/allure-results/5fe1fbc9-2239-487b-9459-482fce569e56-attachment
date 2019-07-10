@@ -1,0 +1,13 @@
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_GensisMSISDN_link]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @10-07-2019 12:44:30.0387 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 12:44:32.0036 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 12:44:44.0500 PM
+[ReportManager] Assertion [assertElementExists] is being performed. @10-07-2019 12:44:44.0505 PM
+[ReportManager] Successfully created attachment [Screenshot - 1562755485335_assert_GensisMSISDN_link_assertElementExists_passed] @10-07-2019 12:44:45.0365 PM
+[ReportManager] Assertion Passed; element exists and is unique. Locator [By.xpath: //li[text()='491620491952']]. @10-07-2019 12:44:46.0114 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 12:44:46.0124 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_GensisMSISDN_link] @10-07-2019 12:44:47.0419 PM

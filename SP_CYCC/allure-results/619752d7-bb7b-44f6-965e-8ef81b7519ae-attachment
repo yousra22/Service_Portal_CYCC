@@ -1,0 +1,53 @@
+
+################################################################################################################################################
+Detected SHAFT Engine Version: [2.3.20180305]
+################################################################################################################################################
+[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @10-07-2019 13:04:01.0215 PM
+[ReportManager] Successfully Opened Google Chrome. @10-07-2019 13:04:09.0063 PM
+[ReportManager] Initial window size: (1050, 840) @10-07-2019 13:04:10.0508 PM
+[ReportManager] Window size after SWD Maximize: (1616, 876) @10-07-2019 13:04:10.0780 PM
+[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @10-07-2019 13:04:13.0236 PM
+
+################################################################################################################################################
+Starting Execution:	[1 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @10-07-2019 13:04:21.0041 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 13:04:22.0990 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 13:04:24.0891 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 13:04:29.0897 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:04:32.0984 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:04:36.0141 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 13:04:37.0266 PM
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @10-07-2019 13:04:41.0001 PM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 13:04:41.0003 PM
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_wunschtarif_ChangeTariff_checksuccesMessage]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @10-07-2019 13:04:55.0855 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 13:04:57.0422 PM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @10-07-2019 13:05:18.0660 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 13:05:29.0830 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:05:32.0538 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 13:05:42.0858 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:05:45.0607 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 13:05:55.0921 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:05:58.0643 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 13:06:08.0992 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:06:11.0592 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 13:06:21.0892 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:06:24.0407 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 13:06:34.0658 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 13:06:37.0178 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 13:06:37.0248 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_wunschtarif_ChangeTariff_checksuccesMessage] @10-07-2019 13:06:38.0216 PM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 13:06:38.0218 PM
+[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @10-07-2019 13:06:38.0637 PM
+[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @10-07-2019 13:06:39.0485 PM
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################

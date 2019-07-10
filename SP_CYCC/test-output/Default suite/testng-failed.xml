@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SP_CYCC.CallyaCustomerInfo_Test">
+      <class name="SP_CYCC.MSISDN_Info_Test">
         <methods>
           <include name="beforeClass"/>
           <include name="navigateToURLandLogin"/>
+          <include name="assert_BalanceTransfers_Feilds"/>
         </methods>
-      </class> <!-- SP_CYCC.CallyaCustomerInfo_Test -->
+      </class> <!-- SP_CYCC.MSISDN_Info_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

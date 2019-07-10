@@ -1,0 +1,43 @@
+
+################################################################################################################################################
+Detected SHAFT Engine Version: [2.3.20180305]
+################################################################################################################################################
+[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @10-07-2019 11:42:56.0259 AM
+[ReportManager] Successfully Opened Google Chrome. @10-07-2019 11:43:03.0971 AM
+[ReportManager] Initial window size: (1050, 840) @10-07-2019 11:43:05.0258 AM
+[ReportManager] Window size after SWD Maximize: (1616, 876) @10-07-2019 11:43:05.0440 AM
+[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @10-07-2019 11:43:08.0315 AM
+
+################################################################################################################################################
+Starting Execution:	[1 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @10-07-2019 11:43:16.0019 AM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 11:43:17.0978 AM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 11:43:19.0699 AM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 11:43:23.0892 AM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 11:43:26.0618 AM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 11:43:29.0385 AM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 11:43:30.0509 AM
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @10-07-2019 11:43:33.0634 AM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 11:43:33.0635 AM
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_SessionTimer]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://ecycc8.stweb.elabs.svcs.hpe.com/cycc/serviceportal/getCustomerType.do?MSISDN=491620491952&clearsession=true]. @10-07-2019 11:43:49.0953 AM
+[ReportManager] Assertion [assertElementAttribute] is being performed for target attribute [text]. @10-07-2019 11:43:49.0961 AM
+[ReportManager] Element Action [getText] successfully performed. With the following test data [29:58  ]. @10-07-2019 11:43:52.0926 AM
+[ReportManager] Successfully created attachment [Screenshot - 1562751833637_assert_SessionTimer_assertElementAttribute_failed] @10-07-2019 11:43:53.0672 AM
+[ReportManager] Assertion Failed; actual value of [text] equals [29:58  ] which does not match expected value [29:59  ]. @10-07-2019 11:43:54.0429 AM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 11:43:54.0445 AM
+[ReportManager] Successfully created attachment [Animated Gif - assert_SessionTimer] @10-07-2019 11:43:55.0814 AM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 11:43:55.0815 AM
+[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @10-07-2019 11:43:56.0194 AM
+[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @10-07-2019 11:43:56.0981 AM
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################

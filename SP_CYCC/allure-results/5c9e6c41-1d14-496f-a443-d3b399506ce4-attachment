@@ -1,0 +1,11 @@
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_MSISDNInfo_FieldsDisplayed]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @10-07-2019 13:36:02.0056 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 13:36:03.0391 PM
+[ReportManager] Successfully created attachment [Screenshot - 1562758573707_assert_MSISDNInfo_FieldsDisplayed_waitForElementToBePresent_failed] @10-07-2019 13:36:13.0722 PM
+[ReportManager] [waitForElementToBePresent] failed. With the following test data [Element with locator (By.xpath: //div[@id = 'personalInfoDiv']//div[@class = 'result']//span[not(contains (@class, 'ng-hide'))]] was found [12] times on this page.]. @10-07-2019 13:36:14.0420 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 13:36:14.0439 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_MSISDNInfo_FieldsDisplayed] @10-07-2019 13:36:15.0739 PM
