@@ -48,9 +48,8 @@ public class MSISDN_InfoPage {
 
 	}
 
-	public void verfiy_KaisPopup() {
+	public void Assert_KaisPopup() {
 		ElementActions.waitForElementToBePresent(driver, kais_popup, 3, true);
-		Verifications.verifyElementExists(driver, kais_popup, true);
 		Assertions.assertElementExists(driver, kais_popup, true);
 	}
 
@@ -73,15 +72,18 @@ public class MSISDN_InfoPage {
 
 	}
 
-	public By checkMsisdn(String MSISDN) {
+	public void assert_MsisdnNumber_Displayed(String MSISDN) {
 		By MSISDNValue = By
 				.xpath("//div[@class ='white-content']//div[@class = 'result']//li[text()='" + MSISDN + "']");
 
-		return MSISDNValue;
+		Assertions.assertElementExists(driver, MSISDNValue, true);
 	}
 
-	public By verify_NeueSuche_link() {
-		return neue_Suche_link;
+	public boolean verify_NeueSuche_link() {
+
+		Boolean isDisplayed = ElementActions.isElementDisplayed(driver, neue_Suche_link);
+
+		return isDisplayed;
 
 	}
 
@@ -94,10 +96,9 @@ public class MSISDN_InfoPage {
 		return sessionTimer;
 	}
 
-	public By verify_GensisMSISDN() {
+	public void assert_GensisMSISDN() {
 		By Gensis_MSISDN = By.xpath("//li[text()='491620491952']");
-
-		return Gensis_MSISDN;
+		Assertions.assertElementExists(driver, Gensis_MSISDN, true);
 
 	}
 
@@ -111,6 +112,9 @@ public class MSISDN_InfoPage {
 
 	// yousra 6-9-2019
 	public String[] check_MSISDNInfo_Fields() {
+		
+		ElementActions.waitForElementToBePresent(driver, MSISDN_link, 4, true);
+		
 		java.util.List<WebElement> fields = driver.findElements(list_fields_msisdn);
 		String[] arr = new String[12];
 		arr[0] = fields.get(0).getText();
@@ -131,6 +135,9 @@ public class MSISDN_InfoPage {
 
 	// yousra 6-9-2019
 	public String[] check_MSISDNInfo_tabs() {
+		
+		ElementActions.waitForElementToBePresent(driver, MSISDN_link, 4, true);
+		
 		java.util.List<WebElement> tabs = driver.findElements(list_tabs_msisdn);
 
 		String[] arr = new String[5];

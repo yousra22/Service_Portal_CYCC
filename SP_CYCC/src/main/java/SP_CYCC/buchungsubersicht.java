@@ -13,7 +13,7 @@ public class buchungsubersicht {
 	WebDriver driver;
 
 	// locators
-	By tab_Buchungsübersicht = By.xpath("//li[@heading= 'BuchungsÃ¼bersicht']");
+	By tab_Buchungsübersicht = By.xpath("//li[@heading= 'Buchungsübersicht']");
 	By entryfield_memo = By.xpath("(//div[@ng-if=\"event.entryType == 'Memo'\"])[1] ");
 
 	By bookingTypeFilter_firstDropDown = By.id("bookingTypeFilter");
@@ -61,7 +61,7 @@ public class buchungsubersicht {
 
 	
 	//Need to be re-named ---> Nashwa
-	public String[] Check_Buchungsübersicht_tab() {
+	public String[] Check_Buchungsubersicht_tab() {
 		ElementActions.click(driver, tab_Buchungsübersicht);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,700)");

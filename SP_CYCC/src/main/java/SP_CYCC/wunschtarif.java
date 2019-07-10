@@ -35,6 +35,8 @@ public class wunschtarif {
 		ElementActions.click(driver, Daten_value);
 		ElementActions.click(driver, active_button);
 		ElementActions.click(driver, Ja_Button);
+		
+		ElementActions.waitForElementToBePresent(driver, success_Message, 5, true);
 		WebElement Success_message = driver.findElement(success_Message);
 		String Success_Message = Success_message.getText();
 

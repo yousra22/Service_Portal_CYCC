@@ -36,7 +36,8 @@ public class balance_Transfers {
 		} while (isClickable == false);
 
 		ElementActions.click(driver, tab_BalanceTransfers);
-		String[] arr = new String[20];
+		
+		String[] arr = new String[21];
 		java.util.List<WebElement> info_displayed = driver.findElements(list_info_Donor);
 		arr[0] = info_displayed.get(0).getText().trim();
 		arr[1] = info_displayed.get(1).getText().trim();
