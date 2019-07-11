@@ -14,6 +14,7 @@ public class kundenFlags_MarkerSocs {
 	// locators
 	By tab_KundenFlags = By.xpath("//li[@heading = 'KundenFlags/MarkerSocs']");
 	By list_fields_kundenFlags = By.xpath("//div[@id= 'flagSocs']//span");
+	By first_field = By.xpath("(//div[@id= 'flagSocs']//span)[1]");
 
 	// constructor
 	public kundenFlags_MarkerSocs(WebDriver driver) {
@@ -23,6 +24,8 @@ public class kundenFlags_MarkerSocs {
 	// functions
 
 	public String[] assert_KunderFlags_Fields() {
+		
+		
 		boolean isClickable;
 
 		do {
@@ -31,6 +34,8 @@ public class kundenFlags_MarkerSocs {
 		} while (isClickable == false);
 
 		ElementActions.click(driver, tab_KundenFlags);
+		
+		ElementActions.waitForElementToBePresent(driver, first_field, 2, true);
 		String[] arr = new String[7];
 		java.util.List<WebElement> fields_displayed = driver.findElements(list_fields_kundenFlags);
 		arr[0] = fields_displayed.get(0).getText().trim();

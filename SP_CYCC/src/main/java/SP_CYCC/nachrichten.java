@@ -28,7 +28,7 @@ public class nachrichten {
 	// Functions
 
 	// Yousra 1-7-2019
-	public String[] assert_NachrichtenTab() {
+	public String[] assert_NachrichtenTab_dropdownFields() {
 		boolean isClickable;
 		String[] arr1 = new String[10];
 		do {

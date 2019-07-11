@@ -30,6 +30,8 @@ public class MSISDN_Info_Test {
 	wunschtarif wunschtarif_TabObj;
 	buchungsubersicht buchungsubersicht_TabObj;
 	balance_Transfers balance_Transfers_TabObj;
+	kundenFlags_MarkerSocs kundenFlags_MarkerSocs_TabObj;
+	nachrichten nachrichten_TabObj;
 
 	@BeforeClass // Set-up method, to be run once before the first test
 	public void beforeClass() {
@@ -295,57 +297,131 @@ public class MSISDN_Info_Test {
 	}
 
 	// Yousra 27-6-2019
-
-	@Test(dependsOnMethods = { "navigateToURLandLogin" }) 
+	@Test(dependsOnMethods = { "navigateToURLandLogin" })
 	public void assert_BalanceTransfers_Feilds() throws InterruptedException {
+
+		checkMSISDN_Object = new Check_MSISDN(driver);
+		checkMSISDN_Object.enterMSISDN("491620491952");
+
+		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page
+		Thread.sleep(7000);
+
+		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
+		Thread.sleep(8000);
+
+		balance_Transfers_TabObj = new balance_Transfers(driver);
+		String[] arr = balance_Transfers_TabObj.assert_BalanceTransfers_Fields();
+
+		Assertions.assertEquals("Sperrsoc gesetzt", arr[0], 1, true);
+		Assertions.assertEquals("Nutzungsvoraussetzungen nicht erfüllt", arr[1], 1, true);
+		Assertions.assertEquals("maximaler Transferbetrag erreicht ( Geber)", arr[2], 1, true);
+		Assertions.assertEquals("maximale tägliche Transferanzahl erreicht", arr[3], 1, true);
+		Assertions.assertEquals("maximale monatliche Transferanzahl erreicht", arr[4], 1, true);
+		Assertions.assertEquals("keine Aufladung erfolgt", arr[5], 1, true);
+
+		Assertions.assertEquals("Sperrsoc gesetzt", arr[6], 1, true);
+		Assertions.assertEquals("Nutzungsvoraussetzungen nicht erfüllt", arr[7], 1, true);
+		Assertions.assertEquals("maximaler Transferbetrag erreicht ( Empfänger )", arr[8], 1, true);
+		Assertions.assertEquals("maximale tägliche Transferanzahl erreicht", arr[9], 1, true);
+		Assertions.assertEquals("maximale monatliche Transferanzahl erreicht", arr[10], 1, true);
+
+		Assertions.assertEquals("Donor Subscriber", arr[11], 1, true);
+		Assertions.assertEquals("Donor Market", arr[12], 1, true);
+		Assertions.assertEquals("Recipient Subscriber", arr[13], 1, true);
+		Assertions.assertEquals("Recipient Market", arr[14], 1, true);
+		Assertions.assertEquals("Status", arr[15], 1, true);
+		Assertions.assertEquals("Amount", arr[16], 1, true);
+		Assertions.assertEquals("Initiating Date", arr[17], 1, true);
+		Assertions.assertEquals("Executing Date", arr[18], 1, true);
+		Assertions.assertEquals("Donor Charge", arr[19], 1, true);
+		Assertions.assertEquals("Recipient Adjustment", arr[20], 1, true);
+
+	}
+
+	// Yousra 27-6-2019
+	@Test(dependsOnMethods = { "navigateToURLandLogin" })
+	public void assert_KunderFlags_Feilds() throws InterruptedException {
+
+		checkMSISDN_Object = new Check_MSISDN(driver);
+		checkMSISDN_Object.enterMSISDN("491620491952");
+
+		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page
+		Thread.sleep(7000);
+		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
+		Thread.sleep(8000);
+
+		kundenFlags_MarkerSocs_TabObj = new kundenFlags_MarkerSocs(driver);
+
+		String[] arr = kundenFlags_MarkerSocs_TabObj.assert_KunderFlags_Fields();
+
+		Assertions.assertEquals("Statement Erstellung:", arr[0], 1, true);
+		Assertions.assertEquals("Telefonbucheintrag:", arr[1], 1, true);
+		Assertions.assertEquals("DSL:", arr[2], 1, true);
+		Assertions.assertEquals("Renunciation:", arr[3], 1, true);
+		Assertions.assertEquals("Prepaid Replenish:", arr[4], 1, true);
+		Assertions.assertEquals("Advertisement Indicator:", arr[5], 1, true);
+		Assertions.assertEquals(
+				"List of SOCs (FeatureSOC, FeatureSOCDescription) - (AgreementSOC, AgreementSOCDescription)", arr[6], 1,
+				true);
+
+	}
+
+	// Yousra 01-07-2019
+	@Test(dependsOnMethods = { "navigateToURLandLogin" }) 
+	public void assert_Nachrichten_dropdownfields() throws InterruptedException {
 	  
 	  checkMSISDN_Object = new Check_MSISDN(driver);
 	  checkMSISDN_Object.enterMSISDN("491620491952");
 	  
-	  callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page 
-	  Thread.sleep(7000);
-	  
+	  callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page 	  
 	  callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
+	  
 	  Thread.sleep(8000); 
 	  
-	  balance_Transfers_TabObj = new balance_Transfers(driver);	 
-	  String[] arr = balance_Transfers_TabObj.assert_BalanceTransfers_Fields();
 	  
-	  Assertions.assertEquals("Sperrsoc gesetzt", arr[0], 1, true);
-	  Assertions.assertEquals("Nutzungsvoraussetzungen nicht erfüllt", arr[1], 1,true); 
-	  Assertions.assertEquals("maximaler Transferbetrag erreicht ( Geber)",arr[2], 1, true);
-	  Assertions.assertEquals("maximale tägliche Transferanzahl erreicht", arr[3],1, true);
-	  Assertions.assertEquals("maximale monatliche Transferanzahl erreicht",arr[4], 1, true); 
-	  Assertions.assertEquals("keine Aufladung erfolgt", arr[5],1, true);
+	  nachrichten_TabObj = new nachrichten(driver);
+	  String[] arr1 = nachrichten_TabObj.assert_NachrichtenTab_dropdownFields();
 	  
-	  Assertions.assertEquals("Sperrsoc gesetzt", arr[6], 1, true);
-	  Assertions.assertEquals("Nutzungsvoraussetzungen nicht erfüllt", arr[7], 1,true);
-	  Assertions.assertEquals("maximaler Transferbetrag erreicht ( Empfänger )",arr[8], 1, true);
-	  Assertions.assertEquals("maximale tägliche Transferanzahl erreicht", arr[9],1, true);
-	  Assertions.assertEquals("maximale monatliche Transferanzahl erreicht",arr[10], 1, true);
+	  Assertions.assertEquals("7", arr1[0], 1, true); 
+	  Assertions.assertEquals("30",arr1[1], 1, true);
+	  Assertions.assertEquals("90", arr1[2], 1, true);
+	  Assertions.assertEquals("180", arr1[3], 1, true);
+	  Assertions.assertEquals("360", arr1[4], 1, true);
 	  
-	  Assertions.assertEquals("Donor Subscriber", arr[11], 1, true);
-	  Assertions.assertEquals("Donor Market", arr[12], 1, true);
-	  Assertions.assertEquals("Recipient Subscriber", arr[13], 1, true);
-	  Assertions.assertEquals("Recipient Market", arr[14], 1, true);
-	  Assertions.assertEquals("Status", arr[15], 1, true);
-	  Assertions.assertEquals("Amount", arr[16], 1, true);
-	  Assertions.assertEquals("Initiating Date", arr[17], 1, true);
-	  Assertions.assertEquals("Executing Date", arr[18], 1, true);
-	  Assertions.assertEquals("Donor Charge", arr[19], 1, true);
-	  Assertions.assertEquals("Recipient Adjustment", arr[20], 1, true);
+	  Assertions.assertEquals("All Channel", arr1[5], 1, true);
+	  Assertions.assertEquals("SMS", arr1[6], 1, true);
+	  Assertions.assertEquals("Email", arr1[7], 1, true);
+	  Assertions.assertEquals("AppPush", arr1[8], 1, true);
+	  Assertions.assertEquals("Inbox", arr1[9], 1, true);
 	  
 	  }
+
 }
 
 /*
  * 
- * 
- * 
- * 
- * 
- * 
+ *
  * // Yousra 13-6-2019
+ * 
+ * @Test(dependsOnMethods = { "navigateToURLandLogin" }) public void
+ * assert_neuSuche_KaisPopup() throws InterruptedException {
+ * 
+ * checkMSISDN_Object = new Check_MSISDN(driver);
+ * checkMSISDN_Object.enterMSISDN("491620491952");
+ * 
+ * callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new
+ * instance of the page
+ * 
+ * buchungsubersicht_TabObj = new buchungsubersicht(driver);
+ * buchungsubersicht_TabObj.check_EntryTypeMemo();
+ * 
+ * callyaCustomerInfo_Object.click_NeueSuche_link();
+ * 
+ * checkMSISDN_Object.enterMSISDN("491620491952");
+ * callyaCustomerInfo_Object.verfiy_KaisPopup_notDisplayed();
+ * 
+ * }
+ * 
  * 
  * @Test(dependsOnMethods = { "navigateToURLandLogin" }) public void
  * assert_EntrtMemoField() throws InterruptedException {
@@ -361,7 +437,6 @@ public class MSISDN_Info_Test {
  * Assertions.assertElementExists(driver, entryfield_memo, true); }
  * 
  * // Yousra 13-6-2019
- * 
  * @Test(dependsOnMethods = { "navigateToURLandLogin" }) public void
  * assert_EntrtMemoField_notExits() throws InterruptedException {
  * 
@@ -376,84 +451,6 @@ public class MSISDN_Info_Test {
  * callyaCustomerInfo_Object.check_EntryTypeMemo_notexists();
  * 
  * Assertions.assertElementExists(driver, entryfield_memo, false); }
- * 
- * // Yousra 13-6-2019
- * 
- * @Test(dependsOnMethods = { "navigateToURLandLogin" }) public void
- * assert_neuSuche_KaisPopup() throws InterruptedException {
- * 
- * checkMSISDN_Object = new Check_MSISDN(driver);
- * baseLayer.navigateToCheckMsisdnURL();
- * checkMSISDN_Object.enterMSISDN("491620491954");
- * 
- * callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new
- * instance of the page
- * 
- * callyaCustomerInfo_Object.check_EntryTypeMemo();
- * 
- * callyaCustomerInfo_Object.click_NeueSuche_link();
- * 
- * checkMSISDN_Object.enterMSISDN("491620491952");
- * callyaCustomerInfo_Object.verfiy_KaisPopup_notDisplayed();
- * 
- * }
- * 
- * 
- * 
- * // Yousra 27-6-2019
- * 
- * @Test(dependsOnMethods = { "navigateToURLandLogin" }) public void
- * assert_KunderFlags_Feilds() throws InterruptedException {
- * 
- * checkMSISDN_Object = new Check_MSISDN(driver);
- * checkMSISDN_Object.enterMSISDN("491620491952");
- * 
- * callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new
- * instance of the page Thread.sleep(7000);
- * callyaCustomerInfo_Object.closeKiasPopup(); Thread.sleep(8000); String[] arr
- * = callyaCustomerInfo_Object.assert_KunderFlags_Fields();
- * 
- * Assertions.assertEquals("Statement Erstellung:", arr[0], 1, true);
- * Assertions.assertEquals("Telefonbucheintrag:", arr[1], 1, true);
- * Assertions.assertEquals("DSL:", arr[2], 1, true);
- * Assertions.assertEquals("Renunciation:", arr[3], 1, true);
- * Assertions.assertEquals("Prepaid Replenish:", arr[4], 1, true);
- * Assertions.assertEquals("Advertisement Indicator:", arr[5], 1, true);
- * Assertions.assertEquals(
- * "List of SOCs (FeatureSOC, FeatureSOCDescription) - (AgreementSOC, AgreementSOCDescription)"
- * , arr[6], 1, true);
- * 
- * }
- * 
- * // Yousra 01-07-2019
- * 
- * @Test(dependsOnMethods = { "navigateToURLandLogin" }) public void
- * assert_Nachrichten_dropdownfields() throws InterruptedException {
- * 
- * checkMSISDN_Object = new Check_MSISDN(driver);
- * checkMSISDN_Object.enterMSISDN("491620491952");
- * 
- * callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new
- * instance of the page Thread.sleep(7000);
- * callyaCustomerInfo_Object.closeKiasPopup();
- * 
- * Thread.sleep(8000); String[] arr1 =
- * callyaCustomerInfo_Object.assert_NachrichtenTab();
- * 
- * Assertions.assertEquals("7", arr1[0], 1, true); Assertions.assertEquals("30",
- * arr1[1], 1, true); Assertions.assertEquals("90", arr1[2], 1, true);
- * Assertions.assertEquals("180", arr1[3], 1, true);
- * Assertions.assertEquals("360", arr1[4], 1, true);
- * 
- * Assertions.assertEquals("All Channel", arr1[5], 1, true);
- * Assertions.assertEquals("SMS", arr1[6], 1, true);
- * Assertions.assertEquals("Email", arr1[7], 1, true);
- * Assertions.assertEquals("AppPush", arr1[8], 1, true);
- * Assertions.assertEquals("Inbox", arr1[9], 1, true);
- * 
- * }
- * 
- * 
  * 
  * 
  * 
