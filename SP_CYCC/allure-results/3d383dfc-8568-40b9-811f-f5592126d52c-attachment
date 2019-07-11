@@ -1,0 +1,34 @@
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_Nachrichten_dropdownfields]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @11-07-2019 10:49:30.0258 AM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 10:49:31.0489 AM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @11-07-2019 10:49:45.0775 AM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:52.0691 AM
+[ReportManager] Element Action [isElementClickable] successfully performed. @11-07-2019 10:50:05.0254 AM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 10:50:15.0645 AM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:50:17.0934 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [7], actualValue [7], comparisonType [1], and assertionType [true]. @11-07-2019 10:50:18.0253 AM
+[ReportManager] Assertion Passed; actual value [7] does match expected value [7]. @11-07-2019 10:50:18.0261 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [30], actualValue [30], comparisonType [1], and assertionType [true]. @11-07-2019 10:50:18.0262 AM
+[ReportManager] Assertion Passed; actual value [30] does match expected value [30]. @11-07-2019 10:50:18.0262 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [90], actualValue [90], comparisonType [1], and assertionType [true]. @11-07-2019 10:50:18.0263 AM
+[ReportManager] Assertion Passed; actual value [90] does match expected value [90]. @11-07-2019 10:50:18.0263 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [180], actualValue [180], comparisonType [1], and assertionType [true]. @11-07-2019 10:50:18.0263 AM
+[ReportManager] Assertion Passed; actual value [180] does match expected value [180]. @11-07-2019 10:50:18.0264 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [360], actualValue [360], comparisonType [1], and assertionType [true]. @11-07-2019 10:50:18.0264 AM
+[ReportManager] Assertion Passed; actual value [360] does match expected value [360]. @11-07-2019 10:50:18.0265 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [All Channel], actualValue [All Channel], comparisonType [1], and assertionType [true]. @11-07-2019 10:50:18.0265 AM
+[ReportManager] Assertion Passed; actual value [All Channel] does match expected value [All Channel]. @11-07-2019 10:50:18.0265 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [SMS], actualValue [SMS], comparisonType [1], and assertionType [true]. @11-07-2019 10:50:18.0266 AM
+[ReportManager] Assertion Passed; actual value [SMS] does match expected value [SMS]. @11-07-2019 10:50:18.0266 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Email], actualValue [Email], comparisonType [1], and assertionType [true]. @11-07-2019 10:50:18.0266 AM
+[ReportManager] Assertion Passed; actual value [Email] does match expected value [Email]. @11-07-2019 10:50:18.0267 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [AppPush], actualValue [AppPush], comparisonType [1], and assertionType [true]. @11-07-2019 10:50:18.0267 AM
+[ReportManager] Assertion Passed; actual value [AppPush] does match expected value [AppPush]. @11-07-2019 10:50:18.0267 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Inbox], actualValue [Inbox], comparisonType [1], and assertionType [true]. @11-07-2019 10:50:18.0268 AM
+[ReportManager] Assertion Passed; actual value [Inbox] does match expected value [Inbox]. @11-07-2019 10:50:18.0268 AM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @11-07-2019 10:50:18.0275 AM
+[ReportManager] Successfully created attachment [Animated Gif - assert_Nachrichten_dropdownfields] @11-07-2019 10:50:19.0190 AM

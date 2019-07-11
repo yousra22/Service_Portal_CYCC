@@ -1,0 +1,45 @@
+
+################################################################################################################################################
+Detected SHAFT Engine Version: [2.3.20180305]
+################################################################################################################################################
+[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @11-07-2019 10:33:42.0784 AM
+[ReportManager] Successfully Opened Google Chrome. @11-07-2019 10:33:49.0938 AM
+[ReportManager] Initial window size: (1050, 840) @11-07-2019 10:33:51.0220 AM
+[ReportManager] Window size after SWD Maximize: (1616, 876) @11-07-2019 10:33:51.0361 AM
+[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @11-07-2019 10:33:53.0365 AM
+
+################################################################################################################################################
+Starting Execution:	[1 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @11-07-2019 10:34:00.0498 AM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 10:34:02.0257 AM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 10:34:03.0921 AM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 10:34:08.0855 AM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:34:11.0266 AM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:34:13.0656 AM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @11-07-2019 10:34:21.0520 AM
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @11-07-2019 10:34:22.0600 AM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 10:34:22.0600 AM
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_KunderFlags_Feilds]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @11-07-2019 10:34:26.0138 AM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 10:34:27.0363 AM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @11-07-2019 10:34:43.0033 AM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:34:50.0583 AM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 10:35:10.0368 AM
+[ReportManager] Successfully created attachment [Screenshot - 1562834110857_assert_KunderFlags_Feilds_waitForElementToBePresent_failed] @11-07-2019 10:35:10.0870 AM
+[ReportManager] [waitForElementToBePresent] failed. With the following test data [Element with locator (By.xpath: //div[@id= 'flagSocs']//span] was found [7] times on this page.]. @11-07-2019 10:35:11.0325 AM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @11-07-2019 10:35:11.0340 AM
+[ReportManager] Successfully created attachment [Animated Gif - assert_KunderFlags_Feilds] @11-07-2019 10:35:12.0208 AM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 10:35:12.0209 AM
+[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @11-07-2019 10:35:12.0590 AM
+[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @11-07-2019 10:35:13.0247 AM
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################

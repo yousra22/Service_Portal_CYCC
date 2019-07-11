@@ -1,0 +1,40 @@
+
+################################################################################################################################################
+Detected SHAFT Engine Version: [2.3.20180305]
+################################################################################################################################################
+[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @10-07-2019 19:13:05.0540 PM
+[ReportManager] Successfully Opened Google Chrome. @10-07-2019 19:13:13.0338 PM
+[ReportManager] Initial window size: (1050, 840) @10-07-2019 19:13:14.0844 PM
+[ReportManager] Window size after SWD Maximize: (1616, 876) @10-07-2019 19:13:15.0006 PM
+[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @10-07-2019 19:13:17.0445 PM
+
+################################################################################################################################################
+Starting Execution:	[1 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @10-07-2019 19:13:24.0968 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 19:13:26.0916 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 19:13:28.0845 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 19:13:33.0684 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 19:13:36.0721 PM
+[ReportManager] Element Action [click] successfully performed. @10-07-2019 19:13:39.0837 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 19:13:48.0963 PM
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @10-07-2019 19:13:51.0050 PM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 19:13:51.0051 PM
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_KunderFlags_Feilds]
+################################################################################################################################################
+[ReportManager] Successfully created attachment [Screenshot - 1562831486963_assert_KunderFlags_Feilds_identifyUniqueElement_failed] @11-07-2019 09:51:27.0060 AM
+[ReportManager] [identifyUniqueElement] failed. With the following test data [zero elements found matching this locator [By.id: exampleInputEmail3].]. @11-07-2019 09:51:28.0008 AM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @11-07-2019 09:51:28.0189 AM
+[ReportManager] Successfully created attachment [Animated Gif - assert_KunderFlags_Feilds] @11-07-2019 09:51:29.0873 AM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 09:51:29.0874 AM
+[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @11-07-2019 09:51:29.0961 AM
+[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @11-07-2019 09:51:30.0425 AM
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################

@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\yhosnyhussei\AppData\Local\Temp\testng-eclipse-1629257047\testng-customsuite.xml</span>
+                    <span>C:\Users\yhosnyhussei\AppData\Local\Temp\testng-eclipse-1833197820\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="SP_CYCC.MSISDN_Info_Test" hash-for-method="assert_BalanceTransfers_Feilds">assert_BalanceTransfers_Feilds</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="SP_CYCC.MSISDN_Info_Test" hash-for-method="assert_Nachrichten_dropdownfields">assert_Nachrichten_dropdownfields</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -130,9 +130,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="assert_BalanceTransfers_Feilds">
-                  </a> <!-- assert_BalanceTransfers_Feilds -->
-                  <span class="method-name">assert_BalanceTransfers_Feilds</span>
+                  <a name="assert_Nachrichten_dropdownfields">
+                  </a> <!-- assert_Nachrichten_dropdownfields -->
+                  <span class="method-name">assert_Nachrichten_dropdownfields</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -147,7 +147,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\yhosnyhussei\AppData\Local\Temp\testng-eclipse-1629257047\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\yhosnyhussei\AppData\Local\Temp\testng-eclipse-1833197820\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -158,8 +158,8 @@
     &lt;classes&gt;
       &lt;class name=&quot;SP_CYCC.MSISDN_Info_Test&quot;&gt;
         &lt;methods&gt;
+          &lt;include name=&quot;assert_Nachrichten_dropdownfields&quot;/&gt;
           &lt;include name=&quot;navigateToURLandLogin&quot;/&gt;
-          &lt;include name=&quot;assert_BalanceTransfers_Feilds&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- SP_CYCC.MSISDN_Info_Test --&gt;
     &lt;/classes&gt;
@@ -203,13 +203,13 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'assert_BalanceTransfers_Feilds')
+data.setCell(0, 1, 'assert_Nachrichten_dropdownfields')
 data.setCell(0, 2, 'SP_CYCC.MSISDN_Info_Test')
-data.setCell(0, 3, 64635);
+data.setCell(0, 3, 51122);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'navigateToURLandLogin')
 data.setCell(1, 2, 'SP_CYCC.MSISDN_Info_Test')
-data.setCell(1, 3, 22216);
+data.setCell(1, 3, 19956);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -226,52 +226,40 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">assert_BalanceTransfers_Feilds</span>
+              <span class="reporter-method-name">assert_Nachrichten_dropdownfields</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">
 ################################################################################################################################################
 Starting Execution:	[2 out of 2] test cases in the current suite
-Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_BalanceTransfers_Feilds]
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_Nachrichten_dropdownfields]
 ################################################################################################################################################</span>
-                <span class="reporter-method-output">[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @10-07-2019 14:09:52.0045 PM</span>
-                <span class="reporter-method-output">[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 14:09:53.0673 PM</span>
-                <span class="reporter-method-output">[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @10-07-2019 14:10:06.0230 PM</span>
-                <span class="reporter-method-output">[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:10:14.0003 PM</span>
-                <span class="reporter-method-output">[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 14:10:33.0942 PM</span>
-                <span class="reporter-method-output">[ReportManager] Element Action [isElementClickable] successfully performed. @10-07-2019 14:10:35.0343 PM</span>
-                <span class="reporter-method-output">[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 14:10:45.0711 PM</span>
-                <span class="reporter-method-output">[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:10:48.0979 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Sperrsoc gesetzt] does match expected value [Sperrsoc gesetzt]. @10-07-2019 14:10:49.0867 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Nutzungsvoraussetzungen nicht erfüllt] does match expected value [Nutzungsvoraussetzungen nicht erfüllt]. @10-07-2019 14:10:49.0869 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [maximaler Transferbetrag erreicht ( Geber)] does match expected value [maximaler Transferbetrag erreicht ( Geber)]. @10-07-2019 14:10:49.0870 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [maximale tägliche Transferanzahl erreicht] does match expected value [maximale tägliche Transferanzahl erreicht]. @10-07-2019 14:10:49.0871 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [maximale monatliche Transferanzahl erreicht] does match expected value [maximale monatliche Transferanzahl erreicht]. @10-07-2019 14:10:49.0872 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [keine Aufladung erfolgt] does match expected value [keine Aufladung erfolgt]. @10-07-2019 14:10:49.0873 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Sperrsoc gesetzt] does match expected value [Sperrsoc gesetzt]. @10-07-2019 14:10:49.0874 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Nutzungsvoraussetzungen nicht erfüllt] does match expected value [Nutzungsvoraussetzungen nicht erfüllt]. @10-07-2019 14:10:49.0875 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [maximaler Transferbetrag erreicht ( Empfänger )] does match expected value [maximaler Transferbetrag erreicht ( Empfänger )]. @10-07-2019 14:10:49.0877 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [maximale tägliche Transferanzahl erreicht] does match expected value [maximale tägliche Transferanzahl erreicht]. @10-07-2019 14:10:49.0878 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [maximale monatliche Transferanzahl erreicht] does match expected value [maximale monatliche Transferanzahl erreicht]. @10-07-2019 14:10:49.0879 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Donor Subscriber] does match expected value [Donor Subscriber]. @10-07-2019 14:10:49.0880 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Donor Market] does match expected value [Donor Market]. @10-07-2019 14:10:49.0881 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Recipient Subscriber] does match expected value [Recipient Subscriber]. @10-07-2019 14:10:49.0882 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Recipient Market] does match expected value [Recipient Market]. @10-07-2019 14:10:49.0883 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Status] does match expected value [Status]. @10-07-2019 14:10:49.0884 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Amount] does match expected value [Amount]. @10-07-2019 14:10:49.0885 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Initiating Date] does match expected value [Initiating Date]. @10-07-2019 14:10:49.0886 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Executing Date] does match expected value [Executing Date]. @10-07-2019 14:10:49.0888 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Donor Charge] does match expected value [Donor Charge]. @10-07-2019 14:10:49.0889 PM</span>
-                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Recipient Adjustment] does match expected value [Recipient Adjustment]. @10-07-2019 14:10:49.0890 PM</span>
-                <span class="reporter-method-output">[ReportManager] Successfully created attachment [Animated Gif - assert_BalanceTransfers_Feilds] @10-07-2019 14:10:51.0048 PM</span>
-                <span class="reporter-method-output">[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 14:10:51.0048 PM</span>
-                <span class="reporter-method-output">[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @10-07-2019 14:10:51.0498 PM</span>
-                <span class="reporter-method-output">[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @10-07-2019 14:10:52.0334 PM</span>
+                <span class="reporter-method-output">[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @11-07-2019 10:49:30.0258 AM</span>
+                <span class="reporter-method-output">[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 10:49:31.0489 AM</span>
+                <span class="reporter-method-output">[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @11-07-2019 10:49:45.0775 AM</span>
+                <span class="reporter-method-output">[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:52.0691 AM</span>
+                <span class="reporter-method-output">[ReportManager] Element Action [isElementClickable] successfully performed. @11-07-2019 10:50:05.0254 AM</span>
+                <span class="reporter-method-output">[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 10:50:15.0645 AM</span>
+                <span class="reporter-method-output">[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:50:17.0934 AM</span>
+                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [7] does match expected value [7]. @11-07-2019 10:50:18.0261 AM</span>
+                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [30] does match expected value [30]. @11-07-2019 10:50:18.0262 AM</span>
+                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [90] does match expected value [90]. @11-07-2019 10:50:18.0263 AM</span>
+                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [180] does match expected value [180]. @11-07-2019 10:50:18.0264 AM</span>
+                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [360] does match expected value [360]. @11-07-2019 10:50:18.0265 AM</span>
+                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [All Channel] does match expected value [All Channel]. @11-07-2019 10:50:18.0265 AM</span>
+                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [SMS] does match expected value [SMS]. @11-07-2019 10:50:18.0266 AM</span>
+                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Email] does match expected value [Email]. @11-07-2019 10:50:18.0267 AM</span>
+                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [AppPush] does match expected value [AppPush]. @11-07-2019 10:50:18.0267 AM</span>
+                <span class="reporter-method-output">[ReportManager] Assertion Passed; actual value [Inbox] does match expected value [Inbox]. @11-07-2019 10:50:18.0268 AM</span>
+                <span class="reporter-method-output">[ReportManager] Successfully created attachment [Animated Gif - assert_Nachrichten_dropdownfields] @11-07-2019 10:50:19.0190 AM</span>
+                <span class="reporter-method-output">[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 10:50:19.0190 AM</span>
+                <span class="reporter-method-output">[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @11-07-2019 10:50:19.0528 AM</span>
+                <span class="reporter-method-output">[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @11-07-2019 10:50:20.0308 AM</span>
                 <span class="reporter-method-output">
 ################################################################################################################################################
 This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
 SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
 ################################################################################################################################################</span>
-                <span class="reporter-method-output">[ReportManager] Successfully created attachment [SHAFT Engine Logs - Full Execution log] @10-07-2019 14:10:52.0406 PM</span>
+                <span class="reporter-method-output">[ReportManager] Successfully created attachment [SHAFT Engine Logs - Full Execution log] @11-07-2019 10:50:20.0362 AM</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -282,21 +270,21 @@ SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/S
 Starting Execution:	[1 out of 2] test cases in the current suite
 Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
 ################################################################################################################################################</span>
-                <span class="reporter-method-output">[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @10-07-2019 14:09:25.0460 PM</span>
-                <span class="reporter-method-output">[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 14:09:27.0667 PM</span>
-                <span class="reporter-method-output">[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 14:09:29.0526 PM</span>
-                <span class="reporter-method-output">[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 14:09:33.0874 PM</span>
-                <span class="reporter-method-output">[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:09:37.0090 PM</span>
-                <span class="reporter-method-output">[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:09:40.0284 PM</span>
-                <span class="reporter-method-output">[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @10-07-2019 14:09:44.0737 PM</span>
-                <span class="reporter-method-output">[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 14:09:44.0737 PM</span>
+                <span class="reporter-method-output">[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @11-07-2019 10:49:05.0063 AM</span>
+                <span class="reporter-method-output">[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 10:49:06.0885 AM</span>
+                <span class="reporter-method-output">[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 10:49:08.0539 AM</span>
+                <span class="reporter-method-output">[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 10:49:13.0202 AM</span>
+                <span class="reporter-method-output">[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:15.0649 AM</span>
+                <span class="reporter-method-output">[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:17.0990 AM</span>
+                <span class="reporter-method-output">[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @11-07-2019 10:49:26.0786 AM</span>
+                <span class="reporter-method-output">[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 10:49:26.0787 AM</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">14 ignored methods</span>
+            <span class="header-content">16 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -306,9 +294,9 @@ Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
                 <br/>
                 <span class="ignored-method-name">assert_Buchungsübersicht_tab</span>
                 <br/>
-                <span class="ignored-method-name">assert_MSISDN_Truncation</span>
-                <br/>
                 <span class="ignored-method-name">assert_MSISDN_without49</span>
+                <br/>
+                <span class="ignored-method-name">assert_MSISDN_Truncation</span>
                 <br/>
                 <span class="ignored-method-name">assert_wunschtarif_ChangeTariff_checksuccesMessage</span>
                 <br/>
@@ -323,6 +311,10 @@ Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
                 <span class="ignored-method-name">assert_MSISDNnumber_Displayed</span>
                 <br/>
                 <span class="ignored-method-name">assert_NeueSuche_link_navigation</span>
+                <br/>
+                <span class="ignored-method-name">assert_KunderFlags_Feilds</span>
+                <br/>
+                <span class="ignored-method-name">assert_BalanceTransfers_Feilds</span>
                 <br/>
                 <span class="ignored-method-name">assert_MSISDNInfo_Tabs_Displayed</span>
                 <br/>
@@ -347,11 +339,11 @@ Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">navigateToURLandLogin</span>
-                <span class="method-start">13006 ms</span>
+                <span class="method-start">11346 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">assert_BalanceTransfers_Feilds</span>
-                <span class="method-start">40134 ms</span>
+                <span class="method-name">assert_Nachrichten_dropdownfields</span>
+                <span class="method-start">40408 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

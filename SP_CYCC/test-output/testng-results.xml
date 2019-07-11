@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="14" total="16" passed="2">
+<testng-results skipped="0" failed="0" ignored="16" total="18" passed="2">
   <reporter-output>
     <line>
       <![CDATA[
@@ -8,13 +8,13 @@ Detected SHAFT Engine Version: [2.3.20180305]
 ################################################################################################################################################]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @10-07-2019 14:09:05.0607 PM]]>
+      <![CDATA[[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @11-07-2019 10:48:46.0994 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Successfully Opened Google Chrome. @10-07-2019 14:09:14.0064 PM]]>
+      <![CDATA[[ReportManager] Successfully Opened Google Chrome. @11-07-2019 10:48:54.0819 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @10-07-2019 14:09:18.0051 PM]]>
+      <![CDATA[[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @11-07-2019 10:48:58.0033 AM]]>
     </line>
     <line>
       <![CDATA[
@@ -24,134 +24,98 @@ Test Method:[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
 ################################################################################################################################################]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @10-07-2019 14:09:25.0460 PM]]>
+      <![CDATA[[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @11-07-2019 10:49:05.0063 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 14:09:27.0667 PM]]>
+      <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 10:49:06.0885 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 14:09:29.0526 PM]]>
+      <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 10:49:08.0539 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 14:09:33.0874 PM]]>
+      <![CDATA[[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 10:49:13.0202 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:09:37.0090 PM]]>
+      <![CDATA[[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:15.0649 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:09:40.0284 PM]]>
+      <![CDATA[[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:17.0990 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @10-07-2019 14:09:44.0737 PM]]>
+      <![CDATA[[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @11-07-2019 10:49:26.0786 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 14:09:44.0737 PM]]>
+      <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 10:49:26.0787 AM]]>
     </line>
     <line>
       <![CDATA[
 ################################################################################################################################################
 Starting Execution:[2 out of 2] test cases in the current suite
-Test Method:[SP_CYCC.MSISDN_Info_Test.assert_BalanceTransfers_Feilds]
+Test Method:[SP_CYCC.MSISDN_Info_Test.assert_Nachrichten_dropdownfields]
 ################################################################################################################################################]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @10-07-2019 14:09:52.0045 PM]]>
+      <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @11-07-2019 10:49:30.0258 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 14:09:53.0673 PM]]>
+      <![CDATA[[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 10:49:31.0489 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @10-07-2019 14:10:06.0230 PM]]>
+      <![CDATA[[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @11-07-2019 10:49:45.0775 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:10:14.0003 PM]]>
+      <![CDATA[[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:52.0691 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 14:10:33.0942 PM]]>
+      <![CDATA[[ReportManager] Element Action [isElementClickable] successfully performed. @11-07-2019 10:50:05.0254 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Element Action [isElementClickable] successfully performed. @10-07-2019 14:10:35.0343 PM]]>
+      <![CDATA[[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 10:50:15.0645 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 14:10:45.0711 PM]]>
+      <![CDATA[[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:50:17.0934 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:10:48.0979 PM]]>
+      <![CDATA[[ReportManager] Assertion Passed; actual value [7] does match expected value [7]. @11-07-2019 10:50:18.0261 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Sperrsoc gesetzt] does match expected value [Sperrsoc gesetzt]. @10-07-2019 14:10:49.0867 PM]]>
+      <![CDATA[[ReportManager] Assertion Passed; actual value [30] does match expected value [30]. @11-07-2019 10:50:18.0262 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Nutzungsvoraussetzungen nicht erfüllt] does match expected value [Nutzungsvoraussetzungen nicht erfüllt]. @10-07-2019 14:10:49.0869 PM]]>
+      <![CDATA[[ReportManager] Assertion Passed; actual value [90] does match expected value [90]. @11-07-2019 10:50:18.0263 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [maximaler Transferbetrag erreicht ( Geber)] does match expected value [maximaler Transferbetrag erreicht ( Geber)]. @10-07-2019 14:10:49.0870 PM]]>
+      <![CDATA[[ReportManager] Assertion Passed; actual value [180] does match expected value [180]. @11-07-2019 10:50:18.0264 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [maximale tägliche Transferanzahl erreicht] does match expected value [maximale tägliche Transferanzahl erreicht]. @10-07-2019 14:10:49.0871 PM]]>
+      <![CDATA[[ReportManager] Assertion Passed; actual value [360] does match expected value [360]. @11-07-2019 10:50:18.0265 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [maximale monatliche Transferanzahl erreicht] does match expected value [maximale monatliche Transferanzahl erreicht]. @10-07-2019 14:10:49.0872 PM]]>
+      <![CDATA[[ReportManager] Assertion Passed; actual value [All Channel] does match expected value [All Channel]. @11-07-2019 10:50:18.0265 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [keine Aufladung erfolgt] does match expected value [keine Aufladung erfolgt]. @10-07-2019 14:10:49.0873 PM]]>
+      <![CDATA[[ReportManager] Assertion Passed; actual value [SMS] does match expected value [SMS]. @11-07-2019 10:50:18.0266 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Sperrsoc gesetzt] does match expected value [Sperrsoc gesetzt]. @10-07-2019 14:10:49.0874 PM]]>
+      <![CDATA[[ReportManager] Assertion Passed; actual value [Email] does match expected value [Email]. @11-07-2019 10:50:18.0267 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Nutzungsvoraussetzungen nicht erfüllt] does match expected value [Nutzungsvoraussetzungen nicht erfüllt]. @10-07-2019 14:10:49.0875 PM]]>
+      <![CDATA[[ReportManager] Assertion Passed; actual value [AppPush] does match expected value [AppPush]. @11-07-2019 10:50:18.0267 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [maximaler Transferbetrag erreicht ( Empfänger )] does match expected value [maximaler Transferbetrag erreicht ( Empfänger )]. @10-07-2019 14:10:49.0877 PM]]>
+      <![CDATA[[ReportManager] Assertion Passed; actual value [Inbox] does match expected value [Inbox]. @11-07-2019 10:50:18.0268 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [maximale tägliche Transferanzahl erreicht] does match expected value [maximale tägliche Transferanzahl erreicht]. @10-07-2019 14:10:49.0878 PM]]>
+      <![CDATA[[ReportManager] Successfully created attachment [Animated Gif - assert_Nachrichten_dropdownfields] @11-07-2019 10:50:19.0190 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [maximale monatliche Transferanzahl erreicht] does match expected value [maximale monatliche Transferanzahl erreicht]. @10-07-2019 14:10:49.0879 PM]]>
+      <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 10:50:19.0190 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Donor Subscriber] does match expected value [Donor Subscriber]. @10-07-2019 14:10:49.0880 PM]]>
+      <![CDATA[[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @11-07-2019 10:50:19.0528 AM]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Donor Market] does match expected value [Donor Market]. @10-07-2019 14:10:49.0881 PM]]>
-    </line>
-    <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Recipient Subscriber] does match expected value [Recipient Subscriber]. @10-07-2019 14:10:49.0882 PM]]>
-    </line>
-    <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Recipient Market] does match expected value [Recipient Market]. @10-07-2019 14:10:49.0883 PM]]>
-    </line>
-    <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Status] does match expected value [Status]. @10-07-2019 14:10:49.0884 PM]]>
-    </line>
-    <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Amount] does match expected value [Amount]. @10-07-2019 14:10:49.0885 PM]]>
-    </line>
-    <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Initiating Date] does match expected value [Initiating Date]. @10-07-2019 14:10:49.0886 PM]]>
-    </line>
-    <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Executing Date] does match expected value [Executing Date]. @10-07-2019 14:10:49.0888 PM]]>
-    </line>
-    <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Donor Charge] does match expected value [Donor Charge]. @10-07-2019 14:10:49.0889 PM]]>
-    </line>
-    <line>
-      <![CDATA[[ReportManager] Assertion Passed; actual value [Recipient Adjustment] does match expected value [Recipient Adjustment]. @10-07-2019 14:10:49.0890 PM]]>
-    </line>
-    <line>
-      <![CDATA[[ReportManager] Successfully created attachment [Animated Gif - assert_BalanceTransfers_Feilds] @10-07-2019 14:10:51.0048 PM]]>
-    </line>
-    <line>
-      <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 14:10:51.0048 PM]]>
-    </line>
-    <line>
-      <![CDATA[[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @10-07-2019 14:10:51.0498 PM]]>
-    </line>
-    <line>
-      <![CDATA[[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @10-07-2019 14:10:52.0334 PM]]>
+      <![CDATA[[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @11-07-2019 10:50:20.0308 AM]]>
     </line>
     <line>
       <![CDATA[
@@ -161,28 +125,28 @@ SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/S
 ################################################################################################################################################]]>
     </line>
     <line>
-      <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Full Execution log] @10-07-2019 14:10:52.0406 PM]]>
+      <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Full Execution log] @11-07-2019 10:50:20.0362 AM]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="107455" started-at="2019-07-10T12:09:05Z" finished-at="2019-07-10T12:10:52Z">
+  <suite name="Default suite" duration-ms="93752" started-at="2019-07-11T08:48:46Z" finished-at="2019-07-11T08:50:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="107455" started-at="2019-07-10T12:09:05Z" finished-at="2019-07-10T12:10:52Z">
+    <test name="Default test" duration-ms="93752" started-at="2019-07-11T08:48:46Z" finished-at="2019-07-11T08:50:20Z">
       <class name="SP_CYCC.MSISDN_Info_Test">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:SP_CYCC.MSISDN_Info_Test@70dd7e15]" name="beforeClass" is-config="true" duration-ms="12929" started-at="2019-07-10T12:09:05Z" finished-at="2019-07-10T12:09:18Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:SP_CYCC.MSISDN_Info_Test@70dd7e15]" name="beforeClass" is-config="true" duration-ms="11295" started-at="2019-07-11T08:48:46Z" finished-at="2019-07-11T08:48:58Z">
           <reporter-output>
             <line>
-              <![CDATA[[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @10-07-2019 14:09:05.0607 PM]]>
+              <![CDATA[[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @11-07-2019 10:48:46.0994 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Successfully Opened Google Chrome. @10-07-2019 14:09:14.0064 PM]]>
+              <![CDATA[[ReportManager] Successfully Opened Google Chrome. @11-07-2019 10:48:54.0819 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @10-07-2019 14:09:18.0051 PM]]>
+              <![CDATA[[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @11-07-2019 10:48:58.0033 AM]]>
             </line>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="navigateToURLandLogin()[pri:0, instance:SP_CYCC.MSISDN_Info_Test@70dd7e15]" name="navigateToURLandLogin" duration-ms="22216" started-at="2019-07-10T12:09:18Z" finished-at="2019-07-10T12:09:40Z">
+        <test-method status="PASS" signature="navigateToURLandLogin()[pri:0, instance:SP_CYCC.MSISDN_Info_Test@70dd7e15]" name="navigateToURLandLogin" duration-ms="19956" started-at="2019-07-11T08:48:58Z" finished-at="2019-07-11T08:49:18Z">
           <reporter-output>
             <line>
               <![CDATA[
@@ -192,138 +156,102 @@ Test Method:[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
 ################################################################################################################################################]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @10-07-2019 14:09:25.0460 PM]]>
+              <![CDATA[[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @11-07-2019 10:49:05.0063 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 14:09:27.0667 PM]]>
+              <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 10:49:06.0885 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @10-07-2019 14:09:29.0526 PM]]>
+              <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 10:49:08.0539 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 14:09:33.0874 PM]]>
+              <![CDATA[[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 10:49:13.0202 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:09:37.0090 PM]]>
+              <![CDATA[[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:15.0649 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:09:40.0284 PM]]>
+              <![CDATA[[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:17.0990 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @10-07-2019 14:09:44.0737 PM]]>
+              <![CDATA[[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @11-07-2019 10:49:26.0786 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 14:09:44.0737 PM]]>
+              <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 10:49:26.0787 AM]]>
             </line>
           </reporter-output>
         </test-method> <!-- navigateToURLandLogin -->
-        <test-method status="PASS" signature="assert_BalanceTransfers_Feilds()[pri:0, instance:SP_CYCC.MSISDN_Info_Test@70dd7e15]" name="assert_BalanceTransfers_Feilds" duration-ms="64635" started-at="2019-07-10T12:09:45Z" depends-on-methods="SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin" finished-at="2019-07-10T12:10:49Z">
+        <test-method status="PASS" signature="assert_Nachrichten_dropdownfields()[pri:0, instance:SP_CYCC.MSISDN_Info_Test@70dd7e15]" name="assert_Nachrichten_dropdownfields" duration-ms="51122" started-at="2019-07-11T08:49:27Z" depends-on-methods="SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin" finished-at="2019-07-11T08:50:18Z">
           <reporter-output>
             <line>
               <![CDATA[
 ################################################################################################################################################
 Starting Execution:[2 out of 2] test cases in the current suite
-Test Method:[SP_CYCC.MSISDN_Info_Test.assert_BalanceTransfers_Feilds]
+Test Method:[SP_CYCC.MSISDN_Info_Test.assert_Nachrichten_dropdownfields]
 ################################################################################################################################################]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @10-07-2019 14:09:52.0045 PM]]>
+              <![CDATA[[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @11-07-2019 10:49:30.0258 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 14:09:53.0673 PM]]>
+              <![CDATA[[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 10:49:31.0489 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @10-07-2019 14:10:06.0230 PM]]>
+              <![CDATA[[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @11-07-2019 10:49:45.0775 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:10:14.0003 PM]]>
+              <![CDATA[[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:52.0691 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 14:10:33.0942 PM]]>
+              <![CDATA[[ReportManager] Element Action [isElementClickable] successfully performed. @11-07-2019 10:50:05.0254 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Element Action [isElementClickable] successfully performed. @10-07-2019 14:10:35.0343 PM]]>
+              <![CDATA[[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 10:50:15.0645 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @10-07-2019 14:10:45.0711 PM]]>
+              <![CDATA[[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:50:17.0934 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Element Action [click] successfully performed. @10-07-2019 14:10:48.0979 PM]]>
+              <![CDATA[[ReportManager] Assertion Passed; actual value [7] does match expected value [7]. @11-07-2019 10:50:18.0261 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Sperrsoc gesetzt] does match expected value [Sperrsoc gesetzt]. @10-07-2019 14:10:49.0867 PM]]>
+              <![CDATA[[ReportManager] Assertion Passed; actual value [30] does match expected value [30]. @11-07-2019 10:50:18.0262 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Nutzungsvoraussetzungen nicht erfüllt] does match expected value [Nutzungsvoraussetzungen nicht erfüllt]. @10-07-2019 14:10:49.0869 PM]]>
+              <![CDATA[[ReportManager] Assertion Passed; actual value [90] does match expected value [90]. @11-07-2019 10:50:18.0263 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [maximaler Transferbetrag erreicht ( Geber)] does match expected value [maximaler Transferbetrag erreicht ( Geber)]. @10-07-2019 14:10:49.0870 PM]]>
+              <![CDATA[[ReportManager] Assertion Passed; actual value [180] does match expected value [180]. @11-07-2019 10:50:18.0264 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [maximale tägliche Transferanzahl erreicht] does match expected value [maximale tägliche Transferanzahl erreicht]. @10-07-2019 14:10:49.0871 PM]]>
+              <![CDATA[[ReportManager] Assertion Passed; actual value [360] does match expected value [360]. @11-07-2019 10:50:18.0265 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [maximale monatliche Transferanzahl erreicht] does match expected value [maximale monatliche Transferanzahl erreicht]. @10-07-2019 14:10:49.0872 PM]]>
+              <![CDATA[[ReportManager] Assertion Passed; actual value [All Channel] does match expected value [All Channel]. @11-07-2019 10:50:18.0265 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [keine Aufladung erfolgt] does match expected value [keine Aufladung erfolgt]. @10-07-2019 14:10:49.0873 PM]]>
+              <![CDATA[[ReportManager] Assertion Passed; actual value [SMS] does match expected value [SMS]. @11-07-2019 10:50:18.0266 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Sperrsoc gesetzt] does match expected value [Sperrsoc gesetzt]. @10-07-2019 14:10:49.0874 PM]]>
+              <![CDATA[[ReportManager] Assertion Passed; actual value [Email] does match expected value [Email]. @11-07-2019 10:50:18.0267 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Nutzungsvoraussetzungen nicht erfüllt] does match expected value [Nutzungsvoraussetzungen nicht erfüllt]. @10-07-2019 14:10:49.0875 PM]]>
+              <![CDATA[[ReportManager] Assertion Passed; actual value [AppPush] does match expected value [AppPush]. @11-07-2019 10:50:18.0267 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [maximaler Transferbetrag erreicht ( Empfänger )] does match expected value [maximaler Transferbetrag erreicht ( Empfänger )]. @10-07-2019 14:10:49.0877 PM]]>
+              <![CDATA[[ReportManager] Assertion Passed; actual value [Inbox] does match expected value [Inbox]. @11-07-2019 10:50:18.0268 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [maximale tägliche Transferanzahl erreicht] does match expected value [maximale tägliche Transferanzahl erreicht]. @10-07-2019 14:10:49.0878 PM]]>
+              <![CDATA[[ReportManager] Successfully created attachment [Animated Gif - assert_Nachrichten_dropdownfields] @11-07-2019 10:50:19.0190 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [maximale monatliche Transferanzahl erreicht] does match expected value [maximale monatliche Transferanzahl erreicht]. @10-07-2019 14:10:49.0879 PM]]>
+              <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 10:50:19.0190 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Donor Subscriber] does match expected value [Donor Subscriber]. @10-07-2019 14:10:49.0880 PM]]>
+              <![CDATA[[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @11-07-2019 10:50:19.0528 AM]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Donor Market] does match expected value [Donor Market]. @10-07-2019 14:10:49.0881 PM]]>
-            </line>
-            <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Recipient Subscriber] does match expected value [Recipient Subscriber]. @10-07-2019 14:10:49.0882 PM]]>
-            </line>
-            <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Recipient Market] does match expected value [Recipient Market]. @10-07-2019 14:10:49.0883 PM]]>
-            </line>
-            <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Status] does match expected value [Status]. @10-07-2019 14:10:49.0884 PM]]>
-            </line>
-            <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Amount] does match expected value [Amount]. @10-07-2019 14:10:49.0885 PM]]>
-            </line>
-            <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Initiating Date] does match expected value [Initiating Date]. @10-07-2019 14:10:49.0886 PM]]>
-            </line>
-            <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Executing Date] does match expected value [Executing Date]. @10-07-2019 14:10:49.0888 PM]]>
-            </line>
-            <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Donor Charge] does match expected value [Donor Charge]. @10-07-2019 14:10:49.0889 PM]]>
-            </line>
-            <line>
-              <![CDATA[[ReportManager] Assertion Passed; actual value [Recipient Adjustment] does match expected value [Recipient Adjustment]. @10-07-2019 14:10:49.0890 PM]]>
-            </line>
-            <line>
-              <![CDATA[[ReportManager] Successfully created attachment [Animated Gif - assert_BalanceTransfers_Feilds] @10-07-2019 14:10:51.0048 PM]]>
-            </line>
-            <line>
-              <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @10-07-2019 14:10:51.0048 PM]]>
-            </line>
-            <line>
-              <![CDATA[[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @10-07-2019 14:10:51.0498 PM]]>
-            </line>
-            <line>
-              <![CDATA[[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @10-07-2019 14:10:52.0334 PM]]>
+              <![CDATA[[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @11-07-2019 10:50:20.0308 AM]]>
             </line>
             <line>
               <![CDATA[
@@ -333,10 +261,10 @@ SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/S
 ################################################################################################################################################]]>
             </line>
             <line>
-              <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Full Execution log] @10-07-2019 14:10:52.0406 PM]]>
+              <![CDATA[[ReportManager] Successfully created attachment [SHAFT Engine Logs - Full Execution log] @11-07-2019 10:50:20.0362 AM]]>
             </line>
           </reporter-output>
-        </test-method> <!-- assert_BalanceTransfers_Feilds -->
+        </test-method> <!-- assert_Nachrichten_dropdownfields -->
       </class> <!-- SP_CYCC.MSISDN_Info_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

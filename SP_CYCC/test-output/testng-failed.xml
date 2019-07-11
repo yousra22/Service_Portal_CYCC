@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeClass"/>
           <include name="navigateToURLandLogin"/>
-          <include name="assert_BalanceTransfers_Feilds"/>
+          <include name="assert_KunderFlags_Feilds"/>
         </methods>
       </class> <!-- SP_CYCC.MSISDN_Info_Test -->
     </classes>

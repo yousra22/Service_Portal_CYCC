@@ -1,0 +1,30 @@
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_KunderFlags_Feilds]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @11-07-2019 10:38:23.0488 AM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 10:38:24.0715 AM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @11-07-2019 10:38:40.0198 AM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:38:47.0038 AM
+[ReportManager] Element Action [isElementClickable] successfully performed. @11-07-2019 10:38:59.0590 AM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 10:39:09.0974 AM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:39:12.0510 AM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 10:39:22.0834 AM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (10) seconds, for the element's state of presence to be (true). Element locator (By.xpath: (//div[@id= 'flagSocs']//span)[1])]. @11-07-2019 10:39:23.0805 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Statement Erstellung:], actualValue [Statement Erstellung:], comparisonType [1], and assertionType [true]. @11-07-2019 10:39:24.0034 AM
+[ReportManager] Assertion Passed; actual value [Statement Erstellung:] does match expected value [Statement Erstellung:]. @11-07-2019 10:39:24.0042 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Telefonbucheintrag:], actualValue [Telefonbucheintrag:], comparisonType [1], and assertionType [true]. @11-07-2019 10:39:24.0043 AM
+[ReportManager] Assertion Passed; actual value [Telefonbucheintrag:] does match expected value [Telefonbucheintrag:]. @11-07-2019 10:39:24.0043 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [DSL:], actualValue [DSL:], comparisonType [1], and assertionType [true]. @11-07-2019 10:39:24.0044 AM
+[ReportManager] Assertion Passed; actual value [DSL:] does match expected value [DSL:]. @11-07-2019 10:39:24.0044 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Renunciation:], actualValue [Renunciation:], comparisonType [1], and assertionType [true]. @11-07-2019 10:39:24.0044 AM
+[ReportManager] Assertion Passed; actual value [Renunciation:] does match expected value [Renunciation:]. @11-07-2019 10:39:24.0044 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Prepaid Replenish:], actualValue [Prepaid Replenish:], comparisonType [1], and assertionType [true]. @11-07-2019 10:39:24.0045 AM
+[ReportManager] Assertion Passed; actual value [Prepaid Replenish:] does match expected value [Prepaid Replenish:]. @11-07-2019 10:39:24.0045 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [Advertisement Indicator:], actualValue [Advertisement Indicator:], comparisonType [1], and assertionType [true]. @11-07-2019 10:39:24.0045 AM
+[ReportManager] Assertion Passed; actual value [Advertisement Indicator:] does match expected value [Advertisement Indicator:]. @11-07-2019 10:39:24.0046 AM
+[ReportManager] Assertion [assertEquals] is being performed, with expectedValue [List of SOCs (FeatureSOC, FeatureSOCDescription) - (AgreementSOC, AgreementSOCDescription)], actualValue [List of SOCs (FeatureSOC, FeatureSOCDescription) - (AgreementSOC, AgreementSOCDescription)], comparisonType [1], and assertionType [true]. @11-07-2019 10:39:24.0046 AM
+[ReportManager] Assertion Passed; actual value [List of SOCs (FeatureSOC, FeatureSOCDescription) - (AgreementSOC, AgreementSOCDescription)] does match expected value [List of SOCs (FeatureSOC, FeatureSOCDescription) - (AgreementSOC, AgreementSOCDescription)]. @11-07-2019 10:39:24.0046 AM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @11-07-2019 10:39:24.0053 AM
+[ReportManager] Successfully created attachment [Animated Gif - assert_KunderFlags_Feilds] @11-07-2019 10:39:24.0975 AM
