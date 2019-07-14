@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 
 import com.shaft.element.ElementActions;
 import com.shaft.validation.Assertions;
-import com.shaft.validation.Verifications;
 
 public class MSISDN_InfoPage {
 

@@ -2,45 +2,48 @@ package SP_CYCC;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ISelect;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.shaft.browser.BrowserFactory;
 import com.shaft.io.ExcelFileManager;
 import com.shaft.validation.Assertions;
-import com.shaft.validation.Verifications;
 
 import Base_Package.base_Layer;
+import Base_Package.propertiesFile_CYCC;
 
 public class MSISDN_Info_Test {
 
 	WebDriver driver;
 	ExcelFileManager testDataReader;
+
 	String MSISDNinMocks = "491620491952";
 	String MSISDNwithout49 = "1620491952";
 	String MSISDNwithSpace = "  491620491952  ";
 
-	Check_MSISDN checkMSISDN_Object;
-	MSISDN_InfoPage callyaCustomerInfo_Object;
 	base_Layer baseLayer;
 	Login loginObject;
+	Check_MSISDN checkMSISDN_Object;
+	MSISDN_InfoPage callyaCustomerInfo_Object;
 	wunschtarif wunschtarif_TabObj;
 	buchungsubersicht buchungsubersicht_TabObj;
 	balance_Transfers balance_Transfers_TabObj;
 	kundenFlags_MarkerSocs kundenFlags_MarkerSocs_TabObj;
 	nachrichten nachrichten_TabObj;
+	
+	propertiesFile_CYCC prop_file;
+	Properties prop;
 
 	@BeforeClass // Set-up method, to be run once before the first test
 	public void beforeClass() {
-		// System.setProperty("testDataFilePath",
-		// "src/test/resources/TestDataFiles/testSuite01/TestData.xlsx");
-		// testDataReader = new
-		// ExcelFileManager(System.getProperty("testDataFilePath"));
+		// System.setProperty("testDataFilePath","src/test/resources/TestDataFiles/testSuite01/TestData.xlsx");
+		// testDataReader = new ExcelFileManager(System.getProperty("testDataFilePath"));
 		driver = BrowserFactory.getBrowser();
-		// BrowserActions.setWindowSize(driver, 3840, 2160);
+		prop_file = new propertiesFile_CYCC();		
 	}
 
 	@Test
@@ -59,13 +62,13 @@ public class MSISDN_Info_Test {
 
 	// Yousra
 	@Test(dependsOnMethods = { "navigateToURLandLogin" })
-	public void assert_SessionTimer_dispalyed() {
+	public void assert_SessionTimer_dispalyed() throws Exception {
 
 		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page
 		baseLayer = new base_Layer(driver);
 		baseLayer.navigateToURL(); // Navigate to Page UR
 		By sessionTimer = callyaCustomerInfo_Object.assert_SessionCounterTime();
-		Assertions.assertElementAttribute(driver, sessionTimer, "text", "29:59  ", 1, true);
+		Assertions.assertElementAttribute(driver, sessionTimer, "text", prop_file.get_SessionTimer("sessionTimer"), 1, true);
 
 	}
 
@@ -82,7 +85,7 @@ public class MSISDN_Info_Test {
 		assertEquals(displayed, expected);
 
 		callyaCustomerInfo_Object.click_NeueSuche_link();
-		Assertions.assertBrowserAttribute(driver, "currenturl", "cycc/serviceportal/callyaCustomerInfo.do", 3, true);
+		Assertions.assertBrowserAttribute(driver, "currenturl", prop_file.get_neuSuche_URL("neueSuche_URL"), 3, true);
 	}
 
 	// Nashwa 30-5-2019
@@ -190,7 +193,7 @@ public class MSISDN_Info_Test {
 
 		// Assertions.assertEquals("Booking of offer '400 Min/SMS, 400 MB' was
 		// successful.", Success_message, 1, true);
-		assertEquals(Success_message, "Booking of offer '400 Min/SMS, 400 MB' was successful.");
+		assertEquals(Success_message, prop_file.get_SuccessMsg_wunschtarif("SuccessMSG_wunschtarif_tab"));
 	}
 
 	// Nashwa
@@ -223,9 +226,11 @@ public class MSISDN_Info_Test {
 		buchungsubersicht_TabObj = new buchungsubersicht(driver);
 		String[] dropDownList_values = buchungsubersicht_TabObj.Check_Buchungsubersicht_tab();
 
+		Assertions.assertEquals(prop_file.get_Buchungsübersicht_tab_dropdown_fields("Buchungsübersicht_tab_Dropdownfields_names"), dropDownList_values, 1, true);
+		
 		Assertions.assertEquals("Buchungen", dropDownList_values[0], 1, true);
 		Assertions.assertEquals("Flex Einstellungen", dropDownList_values[1], 1, true);
-		Assertions.assertEquals("Stornierungen", dropDownList_values[2], 1, true);
+		/*Assertions.assertEquals("Stornierungen", dropDownList_values[2], 1, true);
 		Assertions.assertEquals("Tarifwechsel", dropDownList_values[3], 1, true);
 		Assertions.assertEquals("Vermerke", dropDownList_values[4], 1, true);
 		Assertions.assertEquals("Alle KanÃ¤le", dropDownList_values[5], 1, true);
@@ -252,7 +257,7 @@ public class MSISDN_Info_Test {
 		Assertions.assertEquals("Letzter Monat", dropDownList_values[26], 1, true);
 		Assertions.assertEquals("Letztes Quartal", dropDownList_values[27], 1, true);
 		Assertions.assertEquals("Aktuelles Jahr", dropDownList_values[28], 1, true);
-		Assertions.assertEquals("Manuelle Auswahl", dropDownList_values[29], 1, true);
+		Assertions.assertEquals("Manuelle Auswahl", dropDownList_values[29], 1, true); */
 	}
 
 	// Yousra 9-6-2019
@@ -367,34 +372,33 @@ public class MSISDN_Info_Test {
 	}
 
 	// Yousra 01-07-2019
-	@Test(dependsOnMethods = { "navigateToURLandLogin" }) 
+	@Test(dependsOnMethods = { "navigateToURLandLogin" })
 	public void assert_Nachrichten_dropdownfields() throws InterruptedException {
-	  
-	  checkMSISDN_Object = new Check_MSISDN(driver);
-	  checkMSISDN_Object.enterMSISDN("491620491952");
-	  
-	  callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page 	  
-	  callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
-	  
-	  Thread.sleep(8000); 
-	  
-	  
-	  nachrichten_TabObj = new nachrichten(driver);
-	  String[] arr1 = nachrichten_TabObj.assert_NachrichtenTab_dropdownFields();
-	  
-	  Assertions.assertEquals("7", arr1[0], 1, true); 
-	  Assertions.assertEquals("30",arr1[1], 1, true);
-	  Assertions.assertEquals("90", arr1[2], 1, true);
-	  Assertions.assertEquals("180", arr1[3], 1, true);
-	  Assertions.assertEquals("360", arr1[4], 1, true);
-	  
-	  Assertions.assertEquals("All Channel", arr1[5], 1, true);
-	  Assertions.assertEquals("SMS", arr1[6], 1, true);
-	  Assertions.assertEquals("Email", arr1[7], 1, true);
-	  Assertions.assertEquals("AppPush", arr1[8], 1, true);
-	  Assertions.assertEquals("Inbox", arr1[9], 1, true);
-	  
-	  }
+
+		checkMSISDN_Object = new Check_MSISDN(driver);
+		checkMSISDN_Object.enterMSISDN("491620491952");
+
+		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page
+		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
+
+		Thread.sleep(8000);
+
+		nachrichten_TabObj = new nachrichten(driver);
+		String[] arr1 = nachrichten_TabObj.assert_NachrichtenTab_dropdownFields();
+
+		Assertions.assertEquals("7", arr1[0], 1, true);
+		Assertions.assertEquals("30", arr1[1], 1, true);
+		Assertions.assertEquals("90", arr1[2], 1, true);
+		Assertions.assertEquals("180", arr1[3], 1, true);
+		Assertions.assertEquals("360", arr1[4], 1, true);
+
+		Assertions.assertEquals("All Channel", arr1[5], 1, true);
+		Assertions.assertEquals("SMS", arr1[6], 1, true);
+		Assertions.assertEquals("Email", arr1[7], 1, true);
+		Assertions.assertEquals("AppPush", arr1[8], 1, true);
+		Assertions.assertEquals("Inbox", arr1[9], 1, true);
+
+	}
 
 }
 
@@ -437,6 +441,7 @@ public class MSISDN_Info_Test {
  * Assertions.assertElementExists(driver, entryfield_memo, true); }
  * 
  * // Yousra 13-6-2019
+ * 
  * @Test(dependsOnMethods = { "navigateToURLandLogin" }) public void
  * assert_EntrtMemoField_notExits() throws InterruptedException {
  * 

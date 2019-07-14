@@ -1,0 +1,47 @@
+
+################################################################################################################################################
+Detected SHAFT Engine Version: [2.3.20180305]
+################################################################################################################################################
+[ReportManager] Attempting to run locally on: [Windows-64], [GoogleChrome]. @11-07-2019 12:39:23.0852 PM
+[ReportManager] Successfully Opened Google Chrome. @11-07-2019 12:39:30.0752 PM
+[ReportManager] Initial window size: (1050, 840) @11-07-2019 12:39:32.0178 PM
+[ReportManager] Window size after SWD Maximize: (1616, 876) @11-07-2019 12:39:32.0349 PM
+[ReportManager] Browser Action [maximizeWindow] successfully performed. With the following test data [New screen size is now: (1616, 876)]. @11-07-2019 12:39:34.0766 PM
+
+################################################################################################################################################
+Starting Execution:	[1 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @11-07-2019 12:39:42.0171 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 12:39:44.0049 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 12:39:45.0945 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 12:39:50.0331 PM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 12:39:53.0368 PM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 12:39:56.0470 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @11-07-2019 12:39:57.0609 PM
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @11-07-2019 12:40:01.0056 PM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 12:40:01.0057 PM
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_wunschtarif_ChangeTariff_checksuccesMessage]
+################################################################################################################################################
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @11-07-2019 12:40:15.0631 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 12:40:17.0273 PM
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @11-07-2019 12:40:38.0955 PM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 12:40:47.0703 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 12:40:58.0186 PM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 12:41:01.0214 PM
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 12:41:11.0606 PM
+[ReportManager] Successfully created attachment [Screenshot - 1562841688486_assert_wunschtarif_ChangeTariff_checksuccesMessage_identifyUniqueElement_failed] @11-07-2019 12:41:28.0511 PM
+[ReportManager] [identifyUniqueElement] failed. With the following test data [zero elements found matching this locator [By.xpath: (//*[@name='radioUnit'])[2]].]. @11-07-2019 12:41:29.0148 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @11-07-2019 12:41:29.0168 PM
+[ReportManager] Successfully created attachment [Animated Gif - assert_wunschtarif_ChangeTariff_checksuccesMessage] @11-07-2019 12:41:30.0282 PM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 12:41:30.0282 PM
+[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @11-07-2019 12:41:30.0751 PM
+[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @11-07-2019 12:41:31.0584 PM
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################

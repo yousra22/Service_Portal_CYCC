@@ -6,8 +6,8 @@
       <class name="SP_CYCC.MSISDN_Info_Test">
         <methods>
           <include name="beforeClass"/>
+          <include name="assert_Buchungsübersicht_tab"/>
           <include name="navigateToURLandLogin"/>
-          <include name="assert_KunderFlags_Feilds"/>
         </methods>
       </class> <!-- SP_CYCC.MSISDN_Info_Test -->
     </classes>

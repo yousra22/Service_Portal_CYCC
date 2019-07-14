@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 11 10:48:46 EET 2019</td>
+<td>Started on:</td><td>Thu Jul 11 13:01:39 EET 2019</td>
 </tr>
-<tr><td>Total time:</td><td>93 seconds (93752 ms)</td>
+<tr><td>Total time:</td><td>145 seconds (145411 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,111 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='SP_CYCC.MSISDN_Info_Test.assert_Buchungsübersicht_tab()'><b>assert_Buchungsübersicht_tab</b><br>Test class: SP_CYCC.MSISDN_Info_Test<br/>
+<a href="#Output-1591492137" onClick='toggleBox("Output-1591492137", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1591492137" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1591492137">
+
+################################################################################################################################################
+Starting Execution:	[2 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_Buchungsübersicht_tab]
+################################################################################################################################################<br/>
+[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @11-07-2019 13:02:26.0083 PM<br/>
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 13:02:27.0688 PM<br/>
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @11-07-2019 13:02:49.0402 PM<br/>
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 13:02:53.0752 PM<br/>
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 13:03:05.0806 PM<br/>
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 13:03:09.0336 PM<br/>
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 13:03:19.0795 PM<br/>
+[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (20) seconds, for the element's state of presence to be (true). Element locator (By.id: bookingTypeFilter)]. @11-07-2019 13:03:21.0017 PM<br/>
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 13:03:31.0390 PM<br/>
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 13:03:34.0279 PM<br/>
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 13:03:44.0901 PM<br/>
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 13:03:47.0857 PM<br/>
+[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 13:03:58.0962 PM<br/>
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 13:04:01.0898 PM<br/>
+[ReportManager] Successfully created attachment [Animated Gif - assert_Buchungsübersicht_tab] @11-07-2019 13:04:03.0466 PM<br/>
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 13:04:03.0467 PM<br/>
+[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @11-07-2019 13:04:03.0898 PM<br/>
+[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @11-07-2019 13:04:04.0796 PM<br/>
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################<br/>
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Full Execution log] @11-07-2019 13:04:04.0875 PM<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException
+	at Base_Package.propertiesFile_CYCC.get_Buchungsübersicht_tab_dropdown_fields(propertiesFile_CYCC.java:51)
+	at SP_CYCC.MSISDN_Info_Test.assert_Buchungsübersicht_tab(MSISDN_Info_Test.java:229)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1591492137", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1591492137'><pre>java.lang.NullPointerException
+	at Base_Package.propertiesFile_CYCC.get_Buchungsübersicht_tab_dropdown_fields(propertiesFile_CYCC.java:51)
+	at SP_CYCC.MSISDN_Info_Test.assert_Buchungsübersicht_tab(MSISDN_Info_Test.java:229)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>102</td>
+<td>SP_CYCC.MSISDN_Info_Test@5ac86ba5</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,72 +180,29 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='SP_CYCC.MSISDN_Info_Test.assert_Nachrichten_dropdownfields()'><b>assert_Nachrichten_dropdownfields</b><br>Test class: SP_CYCC.MSISDN_Info_Test<br/>
-<a href="#Output-1639341396" onClick='toggleBox("Output-1639341396", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1639341396" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1639341396">
-
-################################################################################################################################################
-Starting Execution:	[2 out of 2] test cases in the current suite
-Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_Nachrichten_dropdownfields]
-################################################################################################################################################<br/>
-[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @11-07-2019 10:49:30.0258 AM<br/>
-[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 10:49:31.0489 AM<br/>
-[ReportManager] Element Action [waitForElementToBePresent] successfully performed. With the following test data [waited for (50) seconds, for the element's state of presence to be (true). Element locator (By.xpath: //div[@id = 'myModal']//div[@class = 'modal-content'])]. @11-07-2019 10:49:45.0775 AM<br/>
-[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:52.0691 AM<br/>
-[ReportManager] Element Action [isElementClickable] successfully performed. @11-07-2019 10:50:05.0254 AM<br/>
-[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.TimeoutException] @11-07-2019 10:50:15.0645 AM<br/>
-[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:50:17.0934 AM<br/>
-[ReportManager] Assertion Passed; actual value [7] does match expected value [7]. @11-07-2019 10:50:18.0261 AM<br/>
-[ReportManager] Assertion Passed; actual value [30] does match expected value [30]. @11-07-2019 10:50:18.0262 AM<br/>
-[ReportManager] Assertion Passed; actual value [90] does match expected value [90]. @11-07-2019 10:50:18.0263 AM<br/>
-[ReportManager] Assertion Passed; actual value [180] does match expected value [180]. @11-07-2019 10:50:18.0264 AM<br/>
-[ReportManager] Assertion Passed; actual value [360] does match expected value [360]. @11-07-2019 10:50:18.0265 AM<br/>
-[ReportManager] Assertion Passed; actual value [All Channel] does match expected value [All Channel]. @11-07-2019 10:50:18.0265 AM<br/>
-[ReportManager] Assertion Passed; actual value [SMS] does match expected value [SMS]. @11-07-2019 10:50:18.0266 AM<br/>
-[ReportManager] Assertion Passed; actual value [Email] does match expected value [Email]. @11-07-2019 10:50:18.0267 AM<br/>
-[ReportManager] Assertion Passed; actual value [AppPush] does match expected value [AppPush]. @11-07-2019 10:50:18.0267 AM<br/>
-[ReportManager] Assertion Passed; actual value [Inbox] does match expected value [Inbox]. @11-07-2019 10:50:18.0268 AM<br/>
-[ReportManager] Successfully created attachment [Animated Gif - assert_Nachrichten_dropdownfields] @11-07-2019 10:50:19.0190 AM<br/>
-[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 10:50:19.0190 AM<br/>
-[ReportManager] Successfully created attachment [Logs - Performance Logs for [Windows-64]] @11-07-2019 10:50:19.0528 AM<br/>
-[ReportManager] Successfully created attachment [Logs - Driver Logs for [Windows-64]] @11-07-2019 10:50:20.0308 AM<br/>
-
-################################################################################################################################################
-This test run was powered by SHAFT Engine, which was created by [Mohab Mohie].
-SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
-################################################################################################################################################<br/>
-[ReportManager] Successfully created attachment [SHAFT Engine Logs - Full Execution log] @11-07-2019 10:50:20.0362 AM<br/>
-</div>
-</td>
-<td></td>
-<td>51</td>
-<td>SP_CYCC.MSISDN_Info_Test@70dd7e15</td></tr>
-<tr>
 <td title='SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin()'><b>navigateToURLandLogin</b><br>Test class: SP_CYCC.MSISDN_Info_Test<br/>
-<a href="#Output-1826195973" onClick='toggleBox("Output-1826195973", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-890160784" onClick='toggleBox("Output-890160784", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1826195973" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1826195973">
+<a href="#Output-890160784" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-890160784">
 
 ################################################################################################################################################
 Starting Execution:	[1 out of 2] test cases in the current suite
 Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
 ################################################################################################################################################<br/>
-[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @11-07-2019 10:49:05.0063 AM<br/>
-[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 10:49:06.0885 AM<br/>
-[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 10:49:08.0539 AM<br/>
-[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 10:49:13.0202 AM<br/>
-[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:15.0649 AM<br/>
-[ReportManager] Element Action [click] successfully performed. @11-07-2019 10:49:17.0990 AM<br/>
-[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @11-07-2019 10:49:26.0786 AM<br/>
-[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 10:49:26.0787 AM<br/>
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @11-07-2019 13:01:59.0778 PM<br/>
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 13:02:01.0730 PM<br/>
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 13:02:03.0651 PM<br/>
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 13:02:08.0272 PM<br/>
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 13:02:11.0259 PM<br/>
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 13:02:14.0290 PM<br/>
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @11-07-2019 13:02:18.0905 PM<br/>
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Current Test log] @11-07-2019 13:02:18.0905 PM<br/>
 </div>
 </td>
 <td></td>
-<td>19</td>
-<td>SP_CYCC.MSISDN_Info_Test@70dd7e15</td></tr>
+<td>21</td>
+<td>SP_CYCC.MSISDN_Info_Test@5ac86ba5</td></tr>
 </table><p>
 </body>
 </html>

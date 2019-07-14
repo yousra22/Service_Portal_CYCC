@@ -65,6 +65,8 @@ public class buchungsubersicht {
 		ElementActions.click(driver, tab_Buchungsübersicht);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,700)");
+		
+		ElementActions.waitForElementToBePresent(driver, bookingTypeFilter_firstDropDown, 4, true);		
 		ElementActions.click(driver, bookingTypeFilter_firstDropDown);
 
 		String[] newArr = new String[30];

@@ -1,0 +1,11 @@
+###################################################
+##### Service Portal CYCC properties
+###################################################
+sessionTimer=29:59  
+neueSuche_URL=cycc/serviceportal/callyaCustomerInfo.do
+SuccessMSG_wunschtarif_tab=Booking of offer '400 Min/SMS, 400 MB' was successful.
+Buchungsübersicht_tab_Dropdownfields_names=Buchungen,Flex Einstellungen,Stornierungen,Tarifwechsel,Vermerke,Alle KanÃ¤le,App (1001),CCC (14),ECG (13),Hotline Agent (1005),Hotline Agent(Service Portal) (1012),Hotline Agent Manager (1007),IVR (1009),KIAS UPS (11),LIG (1008),Mass Activity (1006),SMS (1002),Unknown (1000),USSD (1004),USSD (1011),Webpage/Mobile Website (1010),Gestern,Aktuelle Woche,Aktueller Monat,Aktuelles Quartal,Letzte Woche,Letzter Monat,Letztes Quartal,Aktuelles Jahr,Manuelle Auswahl
+
+###################################################
+##### END of Properties File
+###################################################

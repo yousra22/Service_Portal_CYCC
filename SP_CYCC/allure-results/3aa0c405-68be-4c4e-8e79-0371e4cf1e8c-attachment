@@ -1,0 +1,13 @@
+
+################################################################################################################################################
+Starting Execution:	[1 out of 2] test cases in the current suite
+Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
+################################################################################################################################################
+[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @11-07-2019 12:34:57.0119 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 12:34:59.0178 PM
+[ReportManager] Element Action [type] successfully performed. With the following test data [admin]. @11-07-2019 12:35:01.0054 PM
+[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @11-07-2019 12:35:05.0437 PM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 12:35:08.0426 PM
+[ReportManager] Element Action [click] successfully performed. @11-07-2019 12:35:11.0485 PM
+[ReportManager] Element Action [switchToDefaultContent] successfully performed. @11-07-2019 12:35:12.0656 PM
+[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @11-07-2019 12:35:16.0024 PM
