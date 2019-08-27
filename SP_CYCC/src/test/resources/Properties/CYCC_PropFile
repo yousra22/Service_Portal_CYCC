@@ -4,8 +4,16 @@
 sessionTimer=29:59  
 neueSuche_URL=cycc/serviceportal/callyaCustomerInfo.do
 SuccessMSG_wunschtarif_tab=Booking of offer '400 Min/SMS, 400 MB' was successful.
-Buchungsübersicht_tab_Dropdownfields_names=Buchungen,Flex Einstellungen,Stornierungen,Tarifwechsel,Vermerke,Alle KanÃ¤le,App (1001),CCC (14),ECG (13),Hotline Agent (1005),Hotline Agent(Service Portal) (1012),Hotline Agent Manager (1007),IVR (1009),KIAS UPS (11),LIG (1008),Mass Activity (1006),SMS (1002),Unknown (1000),USSD (1004),USSD (1011),Webpage/Mobile Website (1010),Gestern,Aktuelle Woche,Aktueller Monat,Aktuelles Quartal,Letzte Woche,Letzter Monat,Letztes Quartal,Aktuelles Jahr,Manuelle Auswahl
-
+Buchungsubersicht_tab_Dropdownfields_names=Buchungen,Flex Einstellungen,Stornierungen,Tarifwechsel,Vermerke,Alle Kan\u00E4le,App (1001),CCC (14),ECG (13),Hotline Agent (1005),Hotline Agent(Service Portal) (1012),Hotline Agent Manager (1007),IVR (1009),KIAS UPS (11),LIG (1008),Mass Activity (1006),SMS (1002),Unknown (1000),USSD (1004),USSD (1011),Webpage/Mobile Website (1010),Gestern,Aktuelle Woche,Aktueller Monat,Aktuelles Quartal,Letzte Woche,Letzter Monat,Letztes Quartal,Aktuelles Jahr,Manuelle Auswahl
+MSISDNInfo_fields=MSISDN:,Vorname:,Kontostand:,Bonus Guthaben:,Tarifstatus:,Tarifverl\u00E4ngerung am:,Verfügbare Einheiten:,Nach 100% Datenverbrauch:,Emergency Credit:,Anrede:,Nachname:,Tarif:,Markt:,Teilnehmer-Status:,Verf\u00FCgbare Daten:
+MSISDNInfo_Tabs=Special Instructions,KIAS,MSISDN erneut laden,MSISDN
+NachrichtenTab_dropdownFields=7,30,90,180,360,All Channel,SMS,Email,AppPush,Inbox
+nachricht_senden_ConfiguredMsg_Radiobutton_1=Example Message Text
+nachricht_senden_ConfiguredMsg_Radiobutton_2=Example Message with multiple channels
+hintTest_MSISDN_Abrufen=Einen Moment bitte, die MSISDN wird abgefragt
+BalanceTransfer_Donor_checkbox_values=Sperrsoc gesetzt,Nutzungsvoraussetzungen nicht erfüllt,maximaler Transferbetrag erreicht ( Geber),maximale tägliche Transferanzahl erreicht,maximale monatliche Transferanzahl erreicht,keine Aufladung erfolgt
+BalanceTransfer_Recipient_checkbox_values=Sperrsoc gesetzt,Nutzungsvoraussetzungen nicht erfüllt,maximaler Transferbetrag erreicht ( Empfänger ),maximale tägliche Transferanzahl erreicht,maximale monatliche Transferanzahl erreicht
+BalanceTransfer_table_fields=Donor Subscriber,Donor Market,Recipient Subscriber,Recipient Market,Status,Amount,Initiating Date,Executing Date,Donor Charge,Recipient Adjustment
 ###################################################
 ##### END of Properties File
 ###################################################

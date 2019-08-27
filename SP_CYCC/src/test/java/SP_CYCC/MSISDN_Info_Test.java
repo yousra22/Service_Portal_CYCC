@@ -1,103 +1,122 @@
-//date 14.07.2019
+//date 31.07.2019
+
+//added 
 package SP_CYCC;
 
 import static org.testng.Assert.assertEquals;
 
-import java.util.Properties;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeClass;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.shaft.browser.BrowserFactory;
 import com.shaft.io.ExcelFileManager;
 import com.shaft.validation.Assertions;
 
-import Base_Package.base_Layer;
-import Base_Package.propertiesFile_CYCC;
+import base.layer.TestBase;
+import serviceportal.cycc.pages.BalanceTransfers;
+import serviceportal.cycc.pages.Buchungsubersicht;
+import serviceportal.cycc.pages.CallnowCode;
+import serviceportal.cycc.pages.CheckMSISDN;
+import serviceportal.cycc.pages.KundenFlagsMarkerSocs;
+import serviceportal.cycc.pages.Login;
+import serviceportal.cycc.pages.MSISDNInfo;
+import serviceportal.cycc.pages.NachrichtSenden;
+import serviceportal.cycc.pages.nachrichten;
+import serviceportal.cycc.pages.Nutzungsubersicht;
+import serviceportal.cycc.pages.Optionen;
+import serviceportal.cycc.pages.PersonlicheDaten;
+import serviceportal.cycc.pages.Tarifwechsel;
+import serviceportal.cycc.pages.Wunschtarif;
+import serviceportal.cycc.pages.Zahlungsübersicht;
 
-public class MSISDN_Info_Test {
+public class MSISDN_Info_Test extends TestBase {
 
-	WebDriver driver;
 	ExcelFileManager testDataReader;
 
 	String MSISDNinMocks = "491620491952";
 	String MSISDNwithout49 = "1620491952";
 	String MSISDNwithSpace = "  491620491952  ";
+	String MSISDNnormal = "491620491954";// Bishoy 14-07-2019
 
-	base_Layer baseLayer;
-	Login loginObject;
-	Check_MSISDN checkMSISDN_Object;
-	MSISDN_InfoPage callyaCustomerInfo_Object;
-	wunschtarif wunschtarif_TabObj;
-	buchungsubersicht buchungsubersicht_TabObj;
-	balance_Transfers balance_Transfers_TabObj;
-	kundenFlags_MarkerSocs kundenFlags_MarkerSocs_TabObj;
-	nachrichten nachrichten_TabObj;
+	// Bishoy
+	String ZahlungsubersichtTab_ExpectedText = "Zahlungsübersicht";// Test ID 25560 - Bishoy 14-07-2019
+	String Kundenkennwort_ExpectedText = "Kundenkennwort:";// Test ID 25560 - Bishoy 14-07-2019
+	String FirstRadioButton_ExpectedText = "Example Message Text";// Test ID 25562 - Bishoy 14-07-2019
+	String SecondRadioButton_ExpectedText = "Example Message with multiple channels";// Test ID 25562 - Bishoy
+																						// 14-07-2019
+
+	TestBase baseLayer;
+	Login loginObj;
+	NachrichtSenden nachrichtSendenTabObj;// Bishoy 14-07-2019
+	PersonlicheDaten personlicheDatenTabObj;// Bishoy 21-07-2019
+	CheckMSISDN checkmsisdnObj;
+	MSISDNInfo callyaCustomerInfoObj;
+	Wunschtarif wunschtarifTabObj;
+	Buchungsubersicht buchungsubersichtTabObj;
+	BalanceTransfers balanceTransfersTabObj;
+	KundenFlagsMarkerSocs kundenFlagsMarkerSocsTabObj;
+	nachrichten nachrichtenTabObj;
+	Nutzungsubersicht nutzungsubersichtTabObj;
+	// Esraa
+	Tarifwechsel tarifwechselTabObj;
+	CallnowCode callnowCodeTabObj;
+	Optionen optionenTabObj;
+	Zahlungsübersicht zahlungsübersichtTabObj;
 	
-	propertiesFile_CYCC prop_file;
-	Properties prop;
+	By SpecialInstruction = By.xpath("(//tr[@class='pull-right']/td)[3]/button");
 
-	@BeforeClass // Set-up method, to be run once before the first test
-	public void beforeClass() {
-		// System.setProperty("testDataFilePath","src/test/resources/TestDataFiles/testSuite01/TestData.xlsx");
-		// testDataReader = new ExcelFileManager(System.getProperty("testDataFilePath"));
-		driver = BrowserFactory.getBrowser();
-		prop_file = new propertiesFile_CYCC();		
-	}
+	@BeforeMethod
+	public void beforeMethod() {
 
-	@Test
-	public void navigateToURLandLogin() {
-		loginObject = new Login(driver); // initialize a new instance of the page
+		OpenBrowser_navigateToURL();
 
-		loginObject.navigateToURL(); // Navigate to Page URL
-		loginObject.enterLoginInfo("admin", "admin"); // Enter username & Password then click OK
-
-		loginObject.click_CallYaCustomerInfo();
-
+		loginObj = new Login(driver); // initialize a new instance of the page
+		loginObj.enterLoginInfo("admin", "admin"); // Enter username & Password then click OK
+		loginObj.click_CallYaCustomerInfo();
 		// Nashwa 29-5-2019
-		loginObject.focus_On_CheckMsisdnPage(); // focus on Check Msisdn Tab
-
+		loginObj.focus_On_CheckMsisdnPage(); // focus on Check Msisdn Tab
 	}
 
 	// Yousra
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
+	@Test
 	public void assert_SessionTimer_dispalyed() throws Exception {
 
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page
-		baseLayer = new base_Layer(driver);
-		baseLayer.navigateToURL(); // Navigate to Page UR
-		By sessionTimer = callyaCustomerInfo_Object.assert_SessionCounterTime();
-		Assertions.assertElementAttribute(driver, sessionTimer, "text", prop_file.get_SessionTimer("sessionTimer"), 1, true);
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		By sessionTimer = callyaCustomerInfoObj.assert_SessionCounterTime();
+		Assertions.assertElementAttribute(driver, sessionTimer, "text", properties.getProperty("sessionTimer"), 1,
+				true);
 
 	}
 
 	// Yousra
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
+	@Test
 	public void assert_NeueSuche_link_navigation() {
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page
-		baseLayer = new base_Layer(driver);
-		baseLayer.navigateToURL(); // Navigate to Page URL
 
-		boolean displayed = callyaCustomerInfo_Object.verify_NeueSuche_link();
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		boolean displayed = callyaCustomerInfoObj.verify_NeueSuche_link();
 
 		boolean expected = true;
 		assertEquals(displayed, expected);
 
-		callyaCustomerInfo_Object.click_NeueSuche_link();
-		Assertions.assertBrowserAttribute(driver, "currenturl", prop_file.get_neuSuche_URL("neueSuche_URL"), 3, true);
+		callyaCustomerInfoObj.click_NeueSuche_link();
+		Assertions.assertBrowserAttribute(driver, "currenturl", properties.getProperty("neueSuche_URL"), 3, true);
 	}
 
 	// Nashwa 30-5-2019
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
+	@Test
 	public void assert_KiasPopup_displayed() throws InterruptedException {
-		checkMSISDN_Object = new Check_MSISDN(driver);
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver);
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
 
-		checkMSISDN_Object.enterMSISDN(MSISDNinMocks);
-
-		callyaCustomerInfo_Object.Assert_KaisPopup();
+		callyaCustomerInfoObj = new MSISDNInfo(driver);
+		callyaCustomerInfoObj.assert_KaisPopup_displayed();
 
 	}
 
@@ -105,260 +124,531 @@ public class MSISDN_Info_Test {
 	@Test(dependsOnMethods = { "assert_KiasPopup_displayed" })
 	public void assert_MSISDNnumber_Displayed() throws InterruptedException {
 
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver);
-		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
-		callyaCustomerInfo_Object.assert_MsisdnNumber_Displayed(MSISDNinMocks);
+		callyaCustomerInfoObj = new MSISDNInfo(driver);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+		callyaCustomerInfoObj.assert_MsisdnNumber_Displayed(MSISDNinMocks);
 	}
 
 	// Nashwa 30-5-2019
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
+	@Test
 	public void assert_MSISDN_without49() throws InterruptedException {
 
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver);
-		checkMSISDN_Object = new Check_MSISDN(driver);
+		callyaCustomerInfoObj = new MSISDNInfo(driver);
+		checkmsisdnObj = new CheckMSISDN(driver);
 
-		checkMSISDN_Object.enterMSISDN(MSISDNwithout49);
+		checkmsisdnObj.enterMSISDN(MSISDNwithout49);
 
 		Thread.sleep(20000);
 
-		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
-		callyaCustomerInfo_Object.assert_MsisdnNumber_Displayed(MSISDNinMocks);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+		callyaCustomerInfoObj.assert_MsisdnNumber_Displayed(MSISDNinMocks);
 
 	}
 
 	// Nashwa 3-6-2019
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
+	@Test
 	public void assert_MSISDN_Truncation() throws InterruptedException {
 
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver);
-		checkMSISDN_Object = new Check_MSISDN(driver);
+		callyaCustomerInfoObj = new MSISDNInfo(driver);
+		checkmsisdnObj = new CheckMSISDN(driver);
 
-		checkMSISDN_Object.enterMSISDN(MSISDNwithSpace);
+		checkmsisdnObj.enterMSISDN(MSISDNwithSpace);
 
 		Thread.sleep(20000);
 
-		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
-		callyaCustomerInfo_Object.assert_MsisdnNumber_Displayed(MSISDNinMocks);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+		callyaCustomerInfoObj.assert_MsisdnNumber_Displayed(MSISDNinMocks);
 	}
 
-	// Yousra
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
-	public void assert_GensisMSISDN() {
-		checkMSISDN_Object = new Check_MSISDN(driver);
-		checkMSISDN_Object.genesis_MSISDN();
-
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver);
-		callyaCustomerInfo_Object.assert_GensisMSISDN();
-	}
-
-	// Nashwa 3-6-2019 ( to be updated )
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
-	public void assert_MsisdnErnuetLaden_link() throws InterruptedException {
-
-		checkMSISDN_Object = new Check_MSISDN(driver);
-		checkMSISDN_Object.enterMSISDN(MSISDNinMocks);
-
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page
-		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
-		callyaCustomerInfo_Object.click_MSISDNerneutLaden_link();
-		callyaCustomerInfo_Object.assert_SessionCounterTime();
-
-	}
-
-	// Nashwa 3-6-2019
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
+	// Nashwa 3-6-2019 //25569
+	@Test
 	public void assert_GensisMSISDN_link() {
 
-		checkMSISDN_Object = new Check_MSISDN(driver);
-		checkMSISDN_Object.enterMSISDN(MSISDNinMocks);
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
 
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
 
-		callyaCustomerInfo_Object.click_MSISDN_link();
-		callyaCustomerInfo_Object.assert_GensisMSISDN();
+		callyaCustomerInfoObj.click_MSISDN_link();
+		callyaCustomerInfoObj.assert_GensisMSISDN_displayed();
+	}
+
+	// Yousra 31-7.2019 //25568
+	@Test
+	public void assert_MSISDN_link() {
+
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.click_MSISDNAbrufen();
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+
+		boolean displayed = callyaCustomerInfoObj.check_msisdn_link_Displayed();
+		Assertions.assertEquals(true, displayed, 1, true);
+
+		callyaCustomerInfoObj.click_MSISDN_link();
+		callyaCustomerInfoObj.assert_GensisMSISDN_displayed();
+
+		callyaCustomerInfoObj.click_MSISDNerneutLaden_link();
+		callyaCustomerInfoObj.assert_GensisMSISDN_displayed();
+	}
+
+	// Yousra 31-7.2019 //25567
+	@Test
+	public void assert_MSISDNAbrufen_button_HintText() {
+
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.click_MSISDNAbrufen();
+
+		String actual_hintText = checkmsisdnObj.get_hintText_MSISDN_Abrufen();
+		Assertions.assertEquals(properties.getProperty("hintTest_MSISDN_Abrufen"), actual_hintText, 1, true);
 	}
 
 	// Nashwa
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
+	@Test
 	public void assert_wunschtarif_ChangeTariff_checksuccesMessage() throws InterruptedException {
 
-		checkMSISDN_Object = new Check_MSISDN(driver);
-		checkMSISDN_Object.enterMSISDN(MSISDNinMocks);
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
 
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver);
+		callyaCustomerInfoObj = new MSISDNInfo(driver);
 		Thread.sleep(20000);
-		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
 
-		wunschtarif_TabObj = new wunschtarif(driver);
-		String Success_message = wunschtarif_TabObj.Change_tariff();
+		wunschtarifTabObj = new Wunschtarif(driver);
+		String Success_message = wunschtarifTabObj.Change_tariff();
 
 		// Assertions.assertEquals("Booking of offer '400 Min/SMS, 400 MB' was
 		// successful.", Success_message, 1, true);
-		assertEquals(Success_message, prop_file.get_SuccessMsg_wunschtarif("SuccessMSG_wunschtarif_tab"));
+		assertEquals(Success_message, properties.getProperty("SuccessMSG_wunschtarif_tab"));
 	}
 
 	// Nashwa
-	@Test(dependsOnMethods = { "navigateToURLandLogin" }) // --> To be checked
+	@Test
 	public void assert_wunschtarif_activeButton_Disabled() throws InterruptedException {
 
-		checkMSISDN_Object = new Check_MSISDN(driver);
-		checkMSISDN_Object.enterMSISDN(MSISDNinMocks);
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver);
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
+		callyaCustomerInfoObj = new MSISDNInfo(driver);
 		Thread.sleep(20000);
-		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
 
-		wunschtarif_TabObj = new wunschtarif(driver);
-		By active_button_disabled = wunschtarif_TabObj.Check_Active_button();
+		wunschtarifTabObj = new Wunschtarif(driver);
+		By active_button_disabled = wunschtarifTabObj.Check_Active_button();
 		Assertions.assertElementExists(driver, active_button_disabled, true);
 
 	}
 
-	// Nashwa
-	@Test(dependsOnMethods = { "navigateToURLandLogin" }) // to be checked
-	public void assert_Buchungsübersicht_tab() throws InterruptedException {
-
-		checkMSISDN_Object = new Check_MSISDN(driver);
-		checkMSISDN_Object.enterMSISDN(MSISDNinMocks);
-
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver);
-		Thread.sleep(20000);
-		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
-
-		buchungsubersicht_TabObj = new buchungsubersicht(driver);
-		String[] dropDownList_values = buchungsubersicht_TabObj.Check_Buchungsubersicht_tab();
-
-		Assertions.assertEquals(prop_file.get_Buchungsübersicht_tab_dropdown_fields("Buchungsübersicht_tab_Dropdownfields_names"), dropDownList_values, 1, true);
-		
-		Assertions.assertEquals("Buchungen", dropDownList_values[0], 1, true);
-		Assertions.assertEquals("Flex Einstellungen", dropDownList_values[1], 1, true);
-		/*Assertions.assertEquals("Stornierungen", dropDownList_values[2], 1, true);
-		Assertions.assertEquals("Tarifwechsel", dropDownList_values[3], 1, true);
-		Assertions.assertEquals("Vermerke", dropDownList_values[4], 1, true);
-		Assertions.assertEquals("Alle KanÃ¤le", dropDownList_values[5], 1, true);
-		Assertions.assertEquals("App (1001)", dropDownList_values[6], 1, true);
-		Assertions.assertEquals("CCC (14)", dropDownList_values[7], 1, true);
-		Assertions.assertEquals("ECG (13)", dropDownList_values[8], 1, true);
-		Assertions.assertEquals("Hotline Agent (1005)", dropDownList_values[9], 1, true);
-		Assertions.assertEquals("Hotline Agent(Service Portal) (1012)", dropDownList_values[10], 1, true);
-		Assertions.assertEquals("Hotline Agent Manager (1007)", dropDownList_values[11], 1, true);
-		Assertions.assertEquals("IVR (1009)", dropDownList_values[12], 1, true);
-		Assertions.assertEquals("KIAS UPS (11)", dropDownList_values[13], 1, true);
-		Assertions.assertEquals("LIG (1008)", dropDownList_values[14], 1, true);
-		Assertions.assertEquals("Mass Activity (1006)", dropDownList_values[15], 1, true);
-		Assertions.assertEquals("SMS (1002)", dropDownList_values[16], 1, true);
-		Assertions.assertEquals("Unknown (1000)", dropDownList_values[17], 1, true);
-		Assertions.assertEquals("USSD (1004)", dropDownList_values[18], 1, true);
-		Assertions.assertEquals("USSD (1011)", dropDownList_values[19], 1, true);
-		Assertions.assertEquals("Webpage/Mobile Website (1010)", dropDownList_values[20], 1, true);
-		Assertions.assertEquals("Gestern", dropDownList_values[21], 1, true);
-		Assertions.assertEquals("Aktuelle Woche", dropDownList_values[22], 1, true);
-		Assertions.assertEquals("Aktueller Monat", dropDownList_values[23], 1, true);
-		Assertions.assertEquals("Aktuelles Quartal", dropDownList_values[24], 1, true);
-		Assertions.assertEquals("Letzte Woche", dropDownList_values[25], 1, true);
-		Assertions.assertEquals("Letzter Monat", dropDownList_values[26], 1, true);
-		Assertions.assertEquals("Letztes Quartal", dropDownList_values[27], 1, true);
-		Assertions.assertEquals("Aktuelles Jahr", dropDownList_values[28], 1, true);
-		Assertions.assertEquals("Manuelle Auswahl", dropDownList_values[29], 1, true); */
-	}
-
 	// Yousra 9-6-2019
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
-	public void assert_MSISDNInfo_Fields_Displayed() {
-
-		checkMSISDN_Object = new Check_MSISDN(driver);
-		checkMSISDN_Object.enterMSISDN(MSISDNinMocks);
-
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page
-		String[] arr = callyaCustomerInfo_Object.check_MSISDNInfo_Fields();
-
-		Assertions.assertEquals("MSISDN:", arr[0], 1, true);
-		Assertions.assertEquals("Vorname:", arr[1], 1, true);
-		Assertions.assertEquals("Kontostand:", arr[2], 1, true);
-		Assertions.assertEquals("Bonus Guthaben:", arr[3], 1, true);
-		Assertions.assertEquals("Tarifstatus:", arr[4], 1, true);
-		Assertions.assertEquals("Nach 100% Datenverbrauch:", arr[5], 1, true);
-		Assertions.assertEquals("Emergency Credit:", arr[6], 1, true);
-
-		Assertions.assertEquals("Anrede:", arr[7], 1, true);
-		Assertions.assertEquals("Nachname:", arr[8], 1, true);
-		Assertions.assertEquals("Tarif:", arr[9], 1, true);
-		Assertions.assertEquals("Markt:", arr[10], 1, true);
-		Assertions.assertEquals("Teilnehmer-Status:", arr[11], 1, true);
-	}
-
-	// Yousra 9-6-2019
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
+	@Test
 	public void assert_MSISDNInfo_Tabs_Displayed() {
 
-		checkMSISDN_Object = new Check_MSISDN(driver);
-		checkMSISDN_Object.enterMSISDN(MSISDNinMocks);
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
 
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page baseLayer =
-		String[] arr = callyaCustomerInfo_Object.check_MSISDNInfo_tabs();
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page baseLayer =
+		String[] arr_actual = callyaCustomerInfoObj.check_MSISDNInfo_tabs();
 
-		Assertions.assertEquals("Special Instructions", arr[0], 1, true);
-		Assertions.assertEquals("KIAS", arr[1], 1, true);
-		Assertions.assertEquals("MSISDN erneut laden", arr[2], 1, true);
-		Assertions.assertEquals("MSISDN", arr[3], 1, true);
+		String msisdn_info_Tabs = properties.getProperty("MSISDNInfo_Tabs");
+
+		String[] msisdn_TabsArr = new String[4];
+		msisdn_TabsArr = msisdn_info_Tabs.split(",");
+
+		for (int i = 0; i < msisdn_TabsArr.length; i++) {
+
+			Assertions.assertEquals(msisdn_TabsArr[i], arr_actual[i], 1, true);
+		}
 	}
 
-	// Yousra 27-6-2019
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
-	public void assert_BalanceTransfers_Feilds() throws InterruptedException {
+	// Yousra 01-07-2019
+	@Test
+	public void assert_Nachrichten_dropdownfields() throws InterruptedException {
 
-		checkMSISDN_Object = new Check_MSISDN(driver);
-		checkMSISDN_Object.enterMSISDN("491620491952");
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN("491620491952");
 
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page
-		Thread.sleep(7000);
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
 
-		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
 		Thread.sleep(8000);
 
-		balance_Transfers_TabObj = new balance_Transfers(driver);
-		String[] arr = balance_Transfers_TabObj.assert_BalanceTransfers_Fields();
+		nachrichtenTabObj = new nachrichten(driver);
+		String[] arr_actual = nachrichtenTabObj.assert_NachrichtenTab_dropdownFields();
 
-		Assertions.assertEquals("Sperrsoc gesetzt", arr[0], 1, true);
-		Assertions.assertEquals("Nutzungsvoraussetzungen nicht erfüllt", arr[1], 1, true);
-		Assertions.assertEquals("maximaler Transferbetrag erreicht ( Geber)", arr[2], 1, true);
-		Assertions.assertEquals("maximale tägliche Transferanzahl erreicht", arr[3], 1, true);
-		Assertions.assertEquals("maximale monatliche Transferanzahl erreicht", arr[4], 1, true);
-		Assertions.assertEquals("keine Aufladung erfolgt", arr[5], 1, true);
+		String Nachrichten_dropdownfields = properties.getProperty("NachrichtenTab_dropdownFields");
 
-		Assertions.assertEquals("Sperrsoc gesetzt", arr[6], 1, true);
-		Assertions.assertEquals("Nutzungsvoraussetzungen nicht erfüllt", arr[7], 1, true);
-		Assertions.assertEquals("maximaler Transferbetrag erreicht ( Empfänger )", arr[8], 1, true);
-		Assertions.assertEquals("maximale tägliche Transferanzahl erreicht", arr[9], 1, true);
-		Assertions.assertEquals("maximale monatliche Transferanzahl erreicht", arr[10], 1, true);
+		String[] Nachrichten_dropdownfieldsArr = new String[10];
+		Nachrichten_dropdownfieldsArr = Nachrichten_dropdownfields.split(",");
 
-		Assertions.assertEquals("Donor Subscriber", arr[11], 1, true);
-		Assertions.assertEquals("Donor Market", arr[12], 1, true);
-		Assertions.assertEquals("Recipient Subscriber", arr[13], 1, true);
-		Assertions.assertEquals("Recipient Market", arr[14], 1, true);
-		Assertions.assertEquals("Status", arr[15], 1, true);
-		Assertions.assertEquals("Amount", arr[16], 1, true);
-		Assertions.assertEquals("Initiating Date", arr[17], 1, true);
-		Assertions.assertEquals("Executing Date", arr[18], 1, true);
-		Assertions.assertEquals("Donor Charge", arr[19], 1, true);
-		Assertions.assertEquals("Recipient Adjustment", arr[20], 1, true);
+		for (int i = 0; i < Nachrichten_dropdownfieldsArr.length; i++) {
+
+			Assertions.assertEquals(Nachrichten_dropdownfieldsArr[i], arr_actual[i], 1, true);
+		}
+
+	}
+
+	// Nashwa
+	@Test
+	public void assert_Buchungsubersicht_tab() throws InterruptedException {
+
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver);
+		Thread.sleep(20000);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+
+		buchungsubersichtTabObj = new Buchungsubersicht(driver);
+		String[] dropDownList_values = buchungsubersichtTabObj.Check_Buchungsubersicht_tab();
+
+		String dropdownfields = properties.getProperty("Buchungsubersicht_tab_Dropdownfields_names");
+		System.out.print("fields = " + dropdownfields);
+
+		String[] dropdownFields_value = new String[30];
+		dropdownFields_value = dropdownfields.split(",");
+
+		for (int i = 0; i < dropDownList_values.length; i++) {
+			System.out.print("i = " + i);
+			Assertions.assertEquals(dropdownFields_value[i], dropDownList_values[i], 1, true);
+		}
+	}
+
+	
+	// Yousra 9-6-2019
+	@Test
+	public void assert_MSISDNInfo_Fields_Displayed() throws InterruptedException {
+
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		Thread.sleep(8000);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		String[] arr_actual = callyaCustomerInfoObj.check_MSISDNInfo_Fields();
+
+		String msisdn_infoFields = properties.getProperty("MSISDNInfo_fields");
+
+		String[] msisdn_fieldsArr = new String[15];
+		msisdn_fieldsArr = msisdn_infoFields.split(",");
+
+		for (int i = 0; i < msisdn_fieldsArr.length; i++) {
+
+			Assertions.assertEquals(msisdn_fieldsArr[i], arr_actual[i], 1, true);
+		}
 
 	}
 
 	// Yousra 27-6-2019
-	@Test(dependsOnMethods = { "navigateToURLandLogin" })
+	@Test
+	public void assert_BalanceTransfers_Fields() throws InterruptedException {
+
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		Thread.sleep(7000);
+
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+		Thread.sleep(8000);
+
+		balanceTransfersTabObj = new BalanceTransfers(driver);
+		String[] arr_actual = balanceTransfersTabObj.assert_BalanceTransfers_Fields();
+
+		String BalanceTransfer_Donor_checkbox_values = properties.getProperty("BalanceTransfer_Donor_checkbox_values");
+		String BalanceTransfer_Recipient_checkbox_values = properties
+				.getProperty("BalanceTransfer_Recipient_checkbox_values");
+		String BalanceTransfer_table_fields = properties.getProperty("BalanceTransfer_table_fields");
+
+		String[] Donor_checkbox_values_Arr = new String[6];
+		Donor_checkbox_values_Arr = BalanceTransfer_Donor_checkbox_values.split(",");
+		for (int i = 0; i < Donor_checkbox_values_Arr.length; i++) {
+
+			Assertions.assertEquals(Donor_checkbox_values_Arr[i], arr_actual[i], 1, true);
+		}
+
+		int j = 6;
+		String[] Recipient_checkbox_values_Arr = new String[5];
+		Recipient_checkbox_values_Arr = BalanceTransfer_Recipient_checkbox_values.split(",");
+		for (int i = 0; i < Recipient_checkbox_values_Arr.length; i++) {
+
+			Assertions.assertEquals(Recipient_checkbox_values_Arr[i], arr_actual[j], 1, true);
+			j = j + 1;
+		}
+
+		String[] BalanceTransfer_table_Arr = new String[5];
+		BalanceTransfer_table_Arr = BalanceTransfer_table_fields.split(",");
+		for (int i = 0; i < BalanceTransfer_table_Arr.length; i++) {
+
+			Assertions.assertEquals(BalanceTransfer_table_Arr[i], arr_actual[j], 1, true);
+			j = j + 1;
+		}
+
+	}
+
+	// Hadeer 18-7-2019
+	@Test
+	public void assert_UsageHistory_DefaultTab() throws InterruptedException {
+
+		checkmsisdnObj = new CheckMSISDN(driver); // initialize a new instance of the page
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		Thread.sleep(8000);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+
+		nutzungsubersichtTabObj = new Nutzungsubersicht(driver); // initialize a new instance of the page
+		nutzungsubersichtTabObj.Assert_Usage_history();
+	}
+
+	// Hadeer 18-7-2019
+	@Test
+	public void assert_Prepaid_ident_Info_empty() throws InterruptedException {
+
+		checkmsisdnObj = new CheckMSISDN(driver); // initialize a new instance of the page
+		checkmsisdnObj.enterMSISDN("491620491946");
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		Thread.sleep(8000);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+		callyaCustomerInfoObj.check_Prepaid_ident_Info_field();
+	}
+
+	// Test ID 25560 - Bishoy 14-07-2019
+	@Test
+	public void assert_PersonlicheDaten_Zahlungsubersicht_Tabs_Displayed() throws InterruptedException {
+
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNnormal);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+
+		Thread.sleep(30000);
+
+		Assertions.assertEquals(ZahlungsubersichtTab_ExpectedText,
+				callyaCustomerInfoObj.getZahlungsubersichtTabText(), 1, true);
+
+		callyaCustomerInfoObj.clickPersonlicheDatenTab();
+		Thread.sleep(30000);
+
+		personlicheDatenTabObj = new PersonlicheDaten(driver);
+		Assertions.assertEquals(Kundenkennwort_ExpectedText, personlicheDatenTabObj.getKundenkennwortText(), 1, true);
+		Assertions.assertEquals(Kundenkennwort_ExpectedText, personlicheDatenTabObj.getLabelText(6), 1, true);
+	}
+
+	// Test ID 25562 - Bishoy 14-07-2019
+	@Test
+	public void assert_NachrichtSenden_ConfiguredMessage_Displayed() throws InterruptedException {
+
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNnormal);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+		Thread.sleep(10000);
+		callyaCustomerInfoObj.clickNachrichtSendenTab();
+
+		nachrichtSendenTabObj = new NachrichtSenden(driver);
+		Thread.sleep(10000);
+		Assertions.assertEquals(FirstRadioButton_ExpectedText, nachrichtSendenTabObj.getFirstRadioButtonText(), 3,
+				true);
+		Assertions.assertEquals(SecondRadioButton_ExpectedText, nachrichtSendenTabObj.getSecondRadioButtonText(), 3,
+				true);
+	}
+
+	// Test ID 25565 - Bishoy 14-07-2019
+	@Test
+	public void assert_NachrichtSenden_checkboxAppPush_Selectable() throws InterruptedException {
+
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNnormal);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+		Thread.sleep(10000);
+		callyaCustomerInfoObj.clickNachrichtSendenTab();
+		Thread.sleep(30000);
+
+		nachrichtSendenTabObj = new NachrichtSenden(driver);
+		nachrichtSendenTabObj.selectAppPushChannel();
+		nachrichtSendenTabObj.clickSendenButton();
+
+		// pending the message that will be checked
+	}
+
+	// Test ID 25566 - Bishoy 14-07-2019
+	@Test
+	public void assert_NachrichtSenden_checkboxSMS_Selectable() throws InterruptedException {
+
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+		Thread.sleep(10000);
+		callyaCustomerInfoObj.clickNachrichtSendenTab();
+
+		Thread.sleep(30000);
+		nachrichtSendenTabObj = new NachrichtSenden(driver);
+		nachrichtSendenTabObj.selectSMSchannel();
+		nachrichtSendenTabObj.clickSendenButton();
+
+		// pending the message that will be checked
+	}
+
+	// By Esraa //25574
+	@Test
+	public void AssertButtonNotClickable() throws Exception {
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+
+		Thread.sleep(8000);
+
+		boolean DisableExists = callyaCustomerInfoObj.AssertButtonIsNotClickable(SpecialInstruction);
+		Assert.assertTrue(DisableExists);
+
+	}
+
+	// by Esraa //25557
+	@Test
+	public void AssertAllTabsAreAuthoirzedforRead() throws InterruptedException {
+
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+
+		Thread.sleep(8000);
+
+		personlicheDatenTabObj = new PersonlicheDaten(driver);
+		wunschtarifTabObj = new Wunschtarif(driver);
+		tarifwechselTabObj = new Tarifwechsel(driver);
+		callnowCodeTabObj = new CallnowCode(driver);
+		nutzungsubersichtTabObj = new Nutzungsubersicht(driver);
+		optionenTabObj = new Optionen(driver);
+		buchungsubersichtTabObj = new Buchungsubersicht(driver);
+		zahlungsübersichtTabObj = new Zahlungsübersicht(driver);
+		nachrichtSendenTabObj = new NachrichtSenden(driver);
+		nachrichtenTabObj = new nachrichten(driver);
+		balanceTransfersTabObj = new BalanceTransfers(driver);
+		kundenFlagsMarkerSocsTabObj = new KundenFlagsMarkerSocs(driver);
+
+		try {
+			boolean Ispersonliche_Daten_displayed = personlicheDatenTabObj
+					.personliche_Daten_AssertElementISDisplayed();
+			Assert.assertTrue(Ispersonliche_Daten_displayed);
+
+			boolean Is_wunschtarifElementdisplayed = wunschtarifTabObj.wunschtarif_AssertElementISDisplayed();
+			Assert.assertTrue(Is_wunschtarifElementdisplayed);
+
+			boolean Is_TarifwechselElementdisplayed = tarifwechselTabObj.Tarifwechsel_AssertElementISDisplayed();
+			Assert.assertTrue(Is_TarifwechselElementdisplayed);
+
+			boolean Is_CallNowElementdisplayed = callnowCodeTabObj.CallNowCode_AssertElementISDisplayed();
+			Assert.assertTrue(Is_CallNowElementdisplayed);
+
+			boolean Is_nutzungsubersichtElementdisplayed = nutzungsubersichtTabObj
+					.nutzungsubersicht_AssertElementISDisplayed();
+			Assert.assertTrue(Is_nutzungsubersichtElementdisplayed);
+
+			boolean Is_OptionenElementdisplayed = optionenTabObj.Optionen_AssertElementISDisplayed();
+			Assert.assertTrue(Is_OptionenElementdisplayed);
+
+			boolean Is_buchungsubersichtElementdisplayed = buchungsubersichtTabObj
+					.buchungsubersicht_AssertElementISDisplayed();
+			Assert.assertTrue(Is_buchungsubersichtElementdisplayed);
+
+			boolean Is_ZahlungsübersichtElementdisplayed = zahlungsübersichtTabObj
+					.Zahlungsübersicht_AssertElementISDisplayed();
+			Assert.assertTrue(Is_ZahlungsübersichtElementdisplayed);
+
+			boolean Is_nachricht_sendenElementdisplayed = nachrichtSendenTabObj
+					.nachricht_senden_AssertElementISDisplayed();
+			Assert.assertTrue(Is_nachricht_sendenElementdisplayed);
+
+			boolean Is_nachrichtenElementdisplayed = nachrichtenTabObj.nachrichten_AssertElementISDisplayed();
+			Assert.assertTrue(Is_nachrichtenElementdisplayed);
+
+			boolean Is_balance_TransfersElementdisplayed = balanceTransfersTabObj
+					.balance_Transfers_AssertElementISDisplayed();
+			Assert.assertTrue(Is_balance_TransfersElementdisplayed);
+
+			boolean Is_kundenFlags_MarkerSocsElementdisplayed = kundenFlagsMarkerSocsTabObj
+					.kundenFlags_MarkerSocs_AssertElementISDisplayed();
+			Assert.assertTrue(Is_kundenFlags_MarkerSocsElementdisplayed);
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	// Nashwa 3-6-2019
+	@Test
+	public void assert_MsisdnErnuetLaden_link() throws InterruptedException {
+
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+		callyaCustomerInfoObj.click_MSISDNerneutLaden_link();
+		callyaCustomerInfoObj.assert_SessionCounterTime();
+
+	}
+
+	// Hadeer 06-8-2019
+	@Test
+	public void assert_WeekView_PUA() throws InterruptedException {
+		checkmsisdnObj = new CheckMSISDN(driver); // initialize a new instance of the page
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		Thread.sleep(8000);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+
+		nutzungsubersichtTabObj = new Nutzungsubersicht(driver); // initialize a new instance of the page
+		nutzungsubersichtTabObj.Assert_Weekview_PUA();
+
+	}
+
+	// Hadeer 06-8-2019
+	@Test
+	public void assert_WeekView_MMO() throws InterruptedException {
+		checkmsisdnObj = new CheckMSISDN(driver); // initialize a new instance of the page
+		checkmsisdnObj.enterMSISDN(MSISDNnormal);
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+		Thread.sleep(8000);
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
+
+		nutzungsubersichtTabObj = new Nutzungsubersicht(driver); // initialize a new instance of the page
+		nutzungsubersichtTabObj.Assert_Weekview_MMO();
+
+	}
+
+	/// ------------------- to be checked ---------------------------//
+
+	// Yousra 27-6-2019 // to be updated as per new req.
+	@Test
 	public void assert_KunderFlags_Feilds() throws InterruptedException {
 
-		checkMSISDN_Object = new Check_MSISDN(driver);
-		checkMSISDN_Object.enterMSISDN("491620491952");
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN(MSISDNinMocks);
 
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
 		Thread.sleep(7000);
-		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
+		callyaCustomerInfoObj.close_KaisPop_WithNoCred();
 		Thread.sleep(8000);
 
-		kundenFlags_MarkerSocs_TabObj = new kundenFlags_MarkerSocs(driver);
-
-		String[] arr = kundenFlags_MarkerSocs_TabObj.assert_KunderFlags_Fields();
+		kundenFlagsMarkerSocsTabObj = new KundenFlagsMarkerSocs(driver);
+		String[] arr = kundenFlagsMarkerSocsTabObj.assert_KunderFlags_Fields();
 
 		Assertions.assertEquals("Statement Erstellung:", arr[0], 1, true);
 		Assertions.assertEquals("Telefonbucheintrag:", arr[1], 1, true);
@@ -372,95 +662,56 @@ public class MSISDN_Info_Test {
 
 	}
 
-	// Yousra 01-07-2019
+	// Yousra 13-6-2019
+
 	@Test(dependsOnMethods = { "navigateToURLandLogin" })
-	public void assert_Nachrichten_dropdownfields() throws InterruptedException {
+	public void assert_neuSuche_KaisPopup() throws InterruptedException {
 
-		checkMSISDN_Object = new Check_MSISDN(driver);
-		checkMSISDN_Object.enterMSISDN("491620491952");
+		checkmsisdnObj = new CheckMSISDN(driver);
+		checkmsisdnObj.enterMSISDN("491620491952");
 
-		callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new instance of the page
-		callyaCustomerInfo_Object.close_KaisPop_WithNoCred();
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
 
-		Thread.sleep(8000);
+		buchungsubersichtTabObj = new Buchungsubersicht(driver);
+		By entryfield_memo = buchungsubersichtTabObj.check_EntryTypeMemo();
+		Assertions.assertElementExists(driver, entryfield_memo, true);
 
-		nachrichten_TabObj = new nachrichten(driver);
-		String[] arr1 = nachrichten_TabObj.assert_NachrichtenTab_dropdownFields();
+		callyaCustomerInfoObj.click_NeueSuche_link();
 
-		Assertions.assertEquals("7", arr1[0], 1, true);
-		Assertions.assertEquals("30", arr1[1], 1, true);
-		Assertions.assertEquals("90", arr1[2], 1, true);
-		Assertions.assertEquals("180", arr1[3], 1, true);
-		Assertions.assertEquals("360", arr1[4], 1, true);
-
-		Assertions.assertEquals("All Channel", arr1[5], 1, true);
-		Assertions.assertEquals("SMS", arr1[6], 1, true);
-		Assertions.assertEquals("Email", arr1[7], 1, true);
-		Assertions.assertEquals("AppPush", arr1[8], 1, true);
-		Assertions.assertEquals("Inbox", arr1[9], 1, true);
+		checkmsisdnObj.enterMSISDN("491620491952");
+		callyaCustomerInfoObj.verfiy_KaisPopup_notDisplayed();
 
 	}
 
-}
+	@Test(dependsOnMethods = { "navigateToURLandLogin" })
+	public void assert_EntryMemoField() throws InterruptedException {
 
-/*
- * 
- *
- * // Yousra 13-6-2019
- * 
- * @Test(dependsOnMethods = { "navigateToURLandLogin" }) public void
- * assert_neuSuche_KaisPopup() throws InterruptedException {
- * 
- * checkMSISDN_Object = new Check_MSISDN(driver);
- * checkMSISDN_Object.enterMSISDN("491620491952");
- * 
- * callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new
- * instance of the page
- * 
- * buchungsubersicht_TabObj = new buchungsubersicht(driver);
- * buchungsubersicht_TabObj.check_EntryTypeMemo();
- * 
- * callyaCustomerInfo_Object.click_NeueSuche_link();
- * 
- * checkMSISDN_Object.enterMSISDN("491620491952");
- * callyaCustomerInfo_Object.verfiy_KaisPopup_notDisplayed();
- * 
- * }
- * 
- * 
- * @Test(dependsOnMethods = { "navigateToURLandLogin" }) public void
- * assert_EntrtMemoField() throws InterruptedException {
- * 
- * checkMSISDN_Object = new Check_MSISDN(driver);
- * baseLayer.navigateToCheckMsisdnURL();
- * checkMSISDN_Object.enterMSISDN("491620491954");
- * 
- * callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new
- * instance of the page
- * 
- * By entryfield_memo = callyaCustomerInfo_Object.check_EntryTypeMemo();
- * Assertions.assertElementExists(driver, entryfield_memo, true); }
- * 
- * // Yousra 13-6-2019
- * 
- * @Test(dependsOnMethods = { "navigateToURLandLogin" }) public void
- * assert_EntrtMemoField_notExits() throws InterruptedException {
- * 
- * checkMSISDN_Object = new Check_MSISDN(driver);
- * baseLayer.navigateToCheckMsisdnURL();
- * checkMSISDN_Object.enterMSISDN("491620491954");
- * 
- * callyaCustomerInfo_Object = new MSISDN_InfoPage(driver); // initialize a new
- * instance of the page
- * 
- * By entryfield_memo =
- * callyaCustomerInfo_Object.check_EntryTypeMemo_notexists();
- * 
- * Assertions.assertElementExists(driver, entryfield_memo, false); }
- * 
- * 
- * 
- * 
- * 
- * }
- */
+		checkmsisdnObj = new CheckMSISDN(driver);
+		baseLayer.navigateToCheckMsisdnURL();
+		checkmsisdnObj.enterMSISDN("491620491954");
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+
+		buchungsubersichtTabObj = new Buchungsubersicht(driver);
+		By entryfield_memo = buchungsubersichtTabObj.check_EntryTypeMemo();
+
+		Assertions.assertElementExists(driver, entryfield_memo, true);
+	}
+
+	// Yousra 13-6-2019
+	@Test(dependsOnMethods = { "navigateToURLandLogin" })
+	public void assert_EntrtMemoField_notExists() throws InterruptedException {
+
+		checkmsisdnObj = new CheckMSISDN(driver);
+		baseLayer.navigateToCheckMsisdnURL();
+		checkmsisdnObj.enterMSISDN("491620491954");
+
+		callyaCustomerInfoObj = new MSISDNInfo(driver); // initialize a new instance of the page
+
+		buchungsubersichtTabObj = new Buchungsubersicht(driver);
+		By entryfield_memo = buchungsubersichtTabObj.check_EntryTypeMemo_notexists();
+
+		Assertions.assertElementExists(driver, entryfield_memo, false);
+	}
+
+}
