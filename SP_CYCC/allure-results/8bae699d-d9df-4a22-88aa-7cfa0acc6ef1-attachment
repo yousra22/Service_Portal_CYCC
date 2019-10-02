@@ -1,8 +1,0 @@
-
-################################################################################################################################################
-Starting Execution:	[1 out of 2] test cases in the current suite
-Test Method:		[SP_CYCC.MSISDN_Info_Test.navigateToURLandLogin]
-################################################################################################################################################
-[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://esportal8.stweb.elabs.svcs.hpe.com/jsp/serviceportal/login/ServicePortalLogin.jsp]. @10-07-2019 14:28:57.0937 PM
-[ReportManager] Successfully created attachment [Exception Stack Trace - org.openqa.selenium.WebDriverException] @10-07-2019 14:29:11.0752 PM
-[ReportManager] Successfully created attachment [Animated Gif - navigateToURLandLogin] @10-07-2019 14:29:11.0801 PM

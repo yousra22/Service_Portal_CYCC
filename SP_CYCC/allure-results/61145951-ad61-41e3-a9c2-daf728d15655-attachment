@@ -1,9 +1,0 @@
-
-################################################################################################################################################
-Starting Execution:	[2 out of 2] test cases in the current suite
-Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_MSISDNInfo_FieldsDisplayed]
-################################################################################################################################################
-[ReportManager] Element Action [type] successfully performed. With the following test data [491620491952]. @10-07-2019 13:32:24.0087 PM
-[ReportManager] Element Action [keyPress] successfully performed. With the following test data [Enter]. @10-07-2019 13:32:25.0411 PM
-[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 13:32:25.0447 PM
-[ReportManager] Successfully created attachment [Animated Gif - assert_MSISDNInfo_FieldsDisplayed] @10-07-2019 13:32:26.0474 PM

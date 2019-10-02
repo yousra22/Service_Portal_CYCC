@@ -1,5 +1,5 @@
 package serviceportal.cycc.pages;
-
+//16-9
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -30,6 +30,9 @@ public class NachrichtSenden {
 	// Esraa
 	By nachrichtSendenTab = By.xpath("(//div[@class='ng-isolate-scope']//li)[9]");
 	By elementOfTab9 = By.xpath("//div[@id='headingOne']/h4");
+
+	// Bishoy 21-08-2019
+	By message = By.xpath("//*[@id=\"pesonalInfoView\"]//*[@class=\"alert success\"]//p");
 
 	// Bishoy 16-07-2019
 	// Constructor
@@ -84,6 +87,24 @@ public class NachrichtSenden {
 
 		return Ispresent;
 
+	}
+
+	// Bishoy 16-07-2019
+	public void clickNachrichtSendenTab() throws InterruptedException {
+		ElementActions.waitForElementToBePresent(driver, nachrichtSendenTab, 4, true);
+		ElementActions.click(driver, nachrichtSendenTab);
+	}
+
+	// Bishoy 21-08-2019
+	public void selectFirstRadioButton() {
+		ElementActions.waitForElementToBePresent(driver, firstRadioButton, 4, true);
+		ElementActions.click(driver, firstRadioButton);
+	}
+
+	// Bishoy 21-08-2019
+	public String getMessageText() {
+		ElementActions.waitForElementToBePresent(driver, message, 4, true);
+		return ElementActions.getText(driver, message);
 	}
 
 }

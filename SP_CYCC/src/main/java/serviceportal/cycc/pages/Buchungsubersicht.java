@@ -1,5 +1,5 @@
 package serviceportal.cycc.pages;
-
+//16-9
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +15,7 @@ public class Buchungsubersicht {
 	// locators
 	By buchungsübersichtTab = By.xpath("//li[@heading= 'Buchungsübersicht']");
 	By entryFieldMemo = By.xpath("(//div[@ng-if=\"event.entryType == 'Memo'\"])[1] ");
+	By fieldMemo = By.xpath("//div[@id='accordion-histroy']");
 
 	By bookingTypeFilterFirstDropDown = By.id("bookingTypeFilter");
 	By channelFilterSecondDropDown = By.id("channelFilter");
@@ -35,16 +36,23 @@ public class Buchungsubersicht {
 	// Functions
 
 	// yousra 13-06-2019
-	public By check_EntryTypeMemo() throws InterruptedException {
+	// Esraa 8/9/2019
+	public boolean check_EntryTypeMemo() throws InterruptedException {
 
 		ElementActions.click(driver, buchungsübersichtTab);
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollBy(0,250)", "");
+		Thread.sleep(9000);
+		Thread.sleep(5000);
+		boolean ElementMemo;
+		//String texts = driver.findElement(fieldMemo).getText();
+		/*
+		 * if(textss.isEmpty()) System.out.println("KIAS IS not displayed"); else
+		 * System.out.println("KIAS IS displayed");
+		 */
+		ElementMemo = driver.findElement(fieldMemo).getText().isEmpty();
+		return ElementMemo;
 
-		JavascriptExecutor jse = ((JavascriptExecutor) driver);
-		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-
-		jse.executeScript("window.scrollBy(0,-250)", "");
-
-		return entryFieldMemo;
 	}
 
 	// yousra 13-06-2019

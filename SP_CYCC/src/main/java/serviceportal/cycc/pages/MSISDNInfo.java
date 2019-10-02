@@ -1,8 +1,10 @@
 package serviceportal.cycc.pages;
 
+//16-9
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import com.shaft.element.ElementActions;
 import com.shaft.validation.Assertions;
@@ -39,7 +41,26 @@ public class MSISDNInfo {
 	By zahlungsubersichtTab = By.xpath("//li[@heading='Zahlungsübersicht']");
 	By personlicheDatenTab = By.xpath("//li[@heading='Persönliche  Daten']");
 	By nachrichtSendenTab = By.xpath("//li[@heading='Nachricht senden']");
+	// Bishoy 08-08-2019
+	By specialInstructionsButton = By.className("special-instrucion");
+	By popup = By.xpath("//*[@id=\"myModal\"]//div[@class=\"modal-content\"]");
+	By textArea = By.id("inputComment");
 
+	// Esraa
+	By SpecialInstruction = By.xpath("(//tr[@class='pull-right']/td)[3]/button");
+	By SubscriberStatus = By.xpath("(//div[@class='result']//li)[2]");
+
+	// Hadeer 10-9-2019
+    By error_msg = By.xpath ("//p[@id='errorMsg']");
+
+    
+    // Bishoy 18-09-2019 (for cancelled customer)
+    By CancelledCustomer_SIMnumber = By.xpath("//li[span[text()='SIM number:']]");
+    By CancelledCustomer_PUK = By.xpath("//li[span[text()='PUK:']]");
+    By CancelledCustomer_SIMtype = By.xpath("//li[span[text()='SIM type:']]");
+
+    
+    
 	// Constructor
 	public MSISDNInfo(WebDriver driver) {
 		this.driver = driver;
@@ -79,7 +100,7 @@ public class MSISDNInfo {
 
 	}
 
-	//Yousra 
+	// Yousra
 	public boolean check_msisdn_link_Displayed() {
 		return ElementActions.isElementDisplayed(driver, msisdnLink);
 	}
@@ -143,7 +164,7 @@ public class MSISDNInfo {
 		arr[11] = fields.get(11).getText();
 		arr[12] = fields.get(12).getText();
 		arr[13] = fields.get(13).getText();
-		arr[14] = fields.get(14).getText();		
+		arr[14] = fields.get(14).getText();
 
 		return arr;
 	}
@@ -168,14 +189,7 @@ public class MSISDNInfo {
 	// Hadeer
 	public void check_Prepaid_ident_Info_field() throws InterruptedException {
 
-		Assertions.assertElementAttribute(driver, prepaidIdentInfoField, "text", "Prepaid ident Information:", 1,
-				true);
-	}
-
-	// Bishoy 16-07-2019
-	public String getZahlungsubersichtTabText() {
-		ElementActions.waitForElementToBePresent(driver, zahlungsubersichtTab, 4, true);
-		return ElementActions.getText(driver, zahlungsubersichtTab);
+		Assertions.assertElementAttribute(driver, prepaidIdentInfoField, "text", "Prepaid ident Information:", 1, true);
 	}
 
 	// Bishoy 16-07-2019
@@ -198,6 +212,103 @@ public class MSISDNInfo {
 		// System.out.println(ClassAttribute);
 		boolean ClassContainsDisabled = ClassAttribute.contains("disable");
 		return ClassContainsDisabled;
+
+	}
+
+	// Bishoy 16-07-2019
+	public String getZahlungsubersichtTabText() {
+		ElementActions.waitForElementToBePresent(driver, zahlungsubersichtTab, 4, true);
+		return ElementActions.getText(driver, zahlungsubersichtTab);
+	}
+
+	// Bishoy 08-08-2019
+	public String getSpecialInstructionsColor() {
+		ElementActions.waitForElementToBePresent(driver, specialInstructionsButton, 4, true);
+		return ElementActions.getCSSProperty(driver, specialInstructionsButton, "color");
+	}
+
+	// Bishoy 08-08-2019
+	public void clickSpecialInstructionsButton() {
+		ElementActions.click(driver, specialInstructionsButton);
+	}
+
+	// Bishoy 08-08-2019
+	public void checkPopupExists() {
+		ElementActions.waitForElementToBePresent(driver, popup, 4, true);
+	}
+
+	// Bishoy 08-08-2019
+	public String getTextBackgroundColor() {
+		return ElementActions.getCSSProperty(driver, textArea, "background-color");
+	}
+
+	// Bishoy 08-08-2019
+	public String getTextColor() {
+		return ElementActions.getCSSProperty(driver, textArea, "color");
+	}
+
+	// Bishoy 08-08-2019
+	public String getTextFontWeight() {
+		return ElementActions.getCSSProperty(driver, textArea, "font-weight");
+	}
+
+	// Bishoy 08-08-2019
+	public String getText() {
+		return ElementActions.getText(driver, textArea);
+	}
+
+	// Esraa ( to be added in page base)
+	public boolean AssertButtonIsNotClickable() throws Exception {
+
+		Thread.sleep(5000);
+		String ClassAttribute = driver.findElement(SpecialInstruction).getAttribute("class");
+		// System.out.println(ClassAttribute);
+		boolean ClassContainsDisabled = ClassAttribute.contains("disable");
+		return ClassContainsDisabled;
+
+	}
+
+	// Bishoy 18-09-2019
+	public String getCancelledCustomer_SIMnumber() {
+		return ElementActions.getText(driver, CancelledCustomer_SIMnumber);
+	}
+
+	// Bishoy 18-09-2019
+	public String getCancelledCustomer_PUK() {
+		return ElementActions.getText(driver, CancelledCustomer_PUK);
+	}
+
+	// Bishoy 18-09-2019
+	public String getCancelledCustomer_SIMtype() {
+		return ElementActions.getText(driver,CancelledCustomer_SIMtype);
+	}
+
+	// esraa 14-9-2019 //25570
+	public void AssertStatusForValenciaCustomerIsCancelled() throws Exception {
+
+		String Status = driver.findElement(SubscriberStatus).getText();
+
+		Assert.assertTrue(Status.contains("Cancelled"));
+	}
+
+	// hdeer 10-9-2019 TC 25579
+
+	public void enter_wrongKaisCredintails3times(String username, String password) throws InterruptedException {
+		ElementActions.waitForElementToBePresent(driver, kaisPopup, 10, true);
+		Thread.sleep(8000);
+		ElementActions.type(driver, kaisIdTxt, username);
+		ElementActions.type(driver, kaisPwdTxt, password);
+
+		for (int i = 0; i <= 2; i++) {
+			ElementActions.click(driver, enigebenButton);
+
+			if (i < 2) {
+
+				Assertions.assertElementAttribute(driver, error_msg, "text", "Benutzer Passwort stimmt nicht überein",
+						1, true);
+			}
+
+		}
 
 	}
 

@@ -1,5 +1,5 @@
 package serviceportal.cycc.pages;
-
+//16-9
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -47,5 +47,11 @@ public class PersonlicheDaten {
 
 		return Ispresent;
 
+	}
+	
+	// Bishoy 16-07-2019
+	public void clickPersonlicheDatenTab() {
+		ElementActions.waitForElementToBePresent(driver, personlicheDatenTab, 4, true);
+		ElementActions.click(driver, personlicheDatenTab);
 	}
 }

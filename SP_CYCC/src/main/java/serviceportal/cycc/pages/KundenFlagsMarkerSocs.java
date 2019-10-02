@@ -1,4 +1,10 @@
-package serviceportal.cycc.pages;
+package 
+serviceportal.cycc.pages;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,6 +12,7 @@ import org.openqa.selenium.WebElement;
 
 import com.shaft.element.ElementActions;
 
+//16-9
 public class KundenFlagsMarkerSocs {
 
 	// variables
@@ -13,8 +20,9 @@ public class KundenFlagsMarkerSocs {
 
 	// locators
 	By kundenFlagsTab = By.xpath("//li[@heading = 'KundenFlags/MarkerSocs']");
-	By kundenFlagsFieldsList = By.xpath("//div[@id= 'flagSocs']//span");
-	By firstField = By.xpath("(//div[@id= 'flagSocs']//span)[1]");
+	By kundenFlagsFieldsList_values_li = By.xpath("//div[@id= 'flagSocs']//li");
+	By kundenFlagsFieldsList_values_Span = By.xpath("//div[@id= 'flagSocs']//span");	
+	By txtStatementErstellung= By.xpath("(//div[@id='flagSocs']//span)[1]");
 
 	// constructor
 	public KundenFlagsMarkerSocs(WebDriver driver) {
@@ -23,7 +31,8 @@ public class KundenFlagsMarkerSocs {
 
 	// functions
 
-	public String[] assert_KunderFlags_Fields() {
+	// Yousra
+	public boolean[] assert_KunderFlags_Fields_PUA() {
 
 		boolean isClickable;
 
@@ -34,30 +43,175 @@ public class KundenFlagsMarkerSocs {
 
 		ElementActions.click(driver, kundenFlagsTab);
 
-		ElementActions.waitForElementToBePresent(driver, firstField, 2, true);
-		String[] arr = new String[7];
-		java.util.List<WebElement> fields_displayed = driver.findElements(kundenFlagsFieldsList);
-		arr[0] = fields_displayed.get(0).getText().trim();
-		arr[1] = fields_displayed.get(1).getText().trim();
-		arr[2] = fields_displayed.get(2).getText().trim();
-		arr[3] = fields_displayed.get(3).getText().trim();
-		arr[4] = fields_displayed.get(4).getText().trim();
-		arr[5] = fields_displayed.get(5).getText().trim();
-		arr[6] = fields_displayed.get(6).getText().trim();
+		ElementActions.waitForElementToBePresent(driver, txtStatementErstellung, 2, true);
 
-		return arr;
+		Map<String, String> Expected_values = new HashMap<String, String>();
+
+		Expected_values.put("Statement Erstellung", ""); // 25593
+		Expected_values.put("Telefonbucheintrag", "Nein"); // 25593
+		Expected_values.put("DSL", " Ja"); // 25593
+		Expected_values.put("Renunciation", ""); // 25593
+		Expected_values.put("Prepaid Replenish", ""); // 25593
+		Expected_values.put("Advertisement Indicator", ""); // 25593
+
+		java.util.List<WebElement> fields_displayed_values_li = driver.findElements(kundenFlagsFieldsList_values_li);
+
+		Map<String, String> actual_values = new HashMap<String, String>();
+		for (int i = 0; i < 6; i++) {
+
+			if (fields_displayed_values_li.get(i).getText().split(":", -1)[1] != "") {
+
+				actual_values.put(fields_displayed_values_li.get(i).getText().split(":", -1)[0],
+						fields_displayed_values_li.get(i).getText().split(":", -1)[1]);
+			} else
+				actual_values.put(fields_displayed_values_li.get(i).getText().split(":", -1)[0], "");
+
+		}
+
+		boolean[] actual_res = new boolean[6];
+		int i = 0;
+
+		Iterator<Map.Entry<String, String>> iterator_ex = Expected_values.entrySet().iterator();
+		Iterator<Map.Entry<String, String>> iterator_act = actual_values.entrySet().iterator();
+		Entry<String, String> entry_ex = iterator_ex.next();
+		Entry<String, String> entry_act = iterator_act.next();
+
+		boolean loop = true;
+
+		while (loop == true) {
+
+			if (entry_ex.getKey().contentEquals(entry_act.getKey())) {
+				actual_res[i] = entry_ex.getValue().equals(entry_act.getValue());
+				i++;
+
+				if (iterator_ex.hasNext() == true) {
+					entry_ex = iterator_ex.next();
+					entry_act = iterator_act.next();
+				} else {
+					loop = false;
+				}
+			} else {
+				entry_act = iterator_act.next();
+				if (iterator_act.hasNext() != true) {
+					iterator_act = actual_values.entrySet().iterator();
+				}
+			}
+		}
+
+		return actual_res;
+
+	}
+
+	public boolean[] assert_KunderFlags_Fields_MMO() {
+
+		boolean isClickable;
+
+		do {
+			isClickable = ElementActions.isElementClickable(driver, kundenFlagsTab);
+
+		} while (isClickable == false);
+
+		ElementActions.click(driver, kundenFlagsTab);
+
+		ElementActions.waitForElementToBePresent(driver, txtStatementErstellung, 2, true);
+
+		Map<String, String> Expected_values = new HashMap<String, String>();
+
+		Expected_values.put("Statement Erstellung", ""); // 25593
+		Expected_values.put("Telefonbucheintrag", "Ja"); // 25593
+		Expected_values.put("DSL", " Ja"); // 25593
+		Expected_values.put("Renunciation", "Nein"); // 25593
+		Expected_values.put("Prepaid Replenish", "Ja"); // 25593
+		Expected_values.put("Advertisement Indicator", ""); // 25593
+
+		java.util.List<WebElement> fields_displayed_values_li = driver.findElements(kundenFlagsFieldsList_values_li);
+
+		Map<String, String> actual_values = new HashMap<String, String>();
+		for (int i = 0; i < 6; i++) {
+
+			if (fields_displayed_values_li.get(i).getText().split(":", -1)[1] != "") {
+
+				actual_values.put(fields_displayed_values_li.get(i).getText().split(":", -1)[0],
+						fields_displayed_values_li.get(i).getText().split(":", -1)[1]);
+			} else
+				actual_values.put(fields_displayed_values_li.get(i).getText().split(":", -1)[0], "");
+
+		}
+
+		boolean[] actual_res = new boolean[6];
+		int i = 0;
+
+		Iterator<Map.Entry<String, String>> iterator_ex = Expected_values.entrySet().iterator();
+		Iterator<Map.Entry<String, String>> iterator_act = actual_values.entrySet().iterator();
+		Entry<String, String> entry_ex = iterator_ex.next();
+		Entry<String, String> entry_act = iterator_act.next();
+
+		boolean loop = true;
+
+		while (loop == true) {
+
+			if (entry_ex.getKey().contentEquals(entry_act.getKey())) {
+				actual_res[i] = entry_ex.getValue().equals(entry_act.getValue());
+				i++;
+
+				if (iterator_ex.hasNext() == true) {
+					entry_ex = iterator_ex.next();
+					entry_act = iterator_act.next();
+				} else {
+					loop = false;
+				}
+			} else {
+				entry_act = iterator_act.next();
+				if (iterator_act.hasNext() != true) {
+					iterator_act = actual_values.entrySet().iterator();
+				}
+			}
+
+		}
+
+		return actual_res;
 
 	}
 
 	// esraa
-	public boolean kundenFlags_MarkerSocs_AssertElementISDisplayed() throws Exception {
-
-		By elementoftab12 = By.xpath("(//div[@id='flagSocs']//span)[1]");
-		Thread.sleep(9000);
-		Thread.sleep(5000);
+	public boolean assertStatementErsteullengIsDisplayed() throws Exception {			
 		driver.findElement(kundenFlagsTab).click();
 		Thread.sleep(8000);
-		boolean Ispresent = driver.findElement(elementoftab12).isDisplayed();
+		boolean Ispresent = driver.findElement(txtStatementErstellung).isDisplayed();
+
+		return Ispresent;
+
+	}
+	
+	
+	// Yousra
+	public boolean assertListOfSocsAreDisplayed() throws Exception {	
+		
+		boolean isClickable;
+
+		do {
+			isClickable = ElementActions.isElementClickable(driver, kundenFlagsTab);
+
+		} while (isClickable == false);
+
+		ElementActions.click(driver, kundenFlagsTab);
+
+		ElementActions.waitForElementToBePresent(driver, txtStatementErstellung, 2, true);
+		
+		
+		java.util.List<WebElement> allFieldsDisplayed = driver.findElements(kundenFlagsFieldsList_values_li);
+		boolean Ispresent = false;
+		
+		for (int i=0 ;  i<allFieldsDisplayed.size() ; i++)
+		{
+			String actualTxt = allFieldsDisplayed.get(i).getText();
+			if(actualTxt.contentEquals("List of SOCs (FeatureSOC, FeatureSOCDescription) - (AgreementSOC, AgreementSOCDescription)"))
+			{
+				Ispresent = true;
+				break;
+			}
+		}
+		
 
 		return Ispresent;
 

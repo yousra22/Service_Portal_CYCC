@@ -1,5 +1,5 @@
 package serviceportal.cycc.pages;
-
+//16-9
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -24,7 +24,7 @@ public class Nutzungsubersicht {
 	By list_day_month_view = By.xpath("//div[@id='usagehistory_data']//ul[@class='nav nav-tabs']");
 	By tagesübersichtTab = By.xpath("(//ul[@role='tablist']/li/a[@aria-controls='Day View'])[1]");
 	By monatübersichtTab = By.xpath("(//ul[@role='tablist']/li/a[@aria-controls='Month View'])[1]");
-
+	By Tab_weekview = By.xpath("(//ul[@role='tablist']/li/a[@aria-controls='Week View'])[1]");
 	// Constructor
 	public Nutzungsubersicht(WebDriver driver) {
 		this.driver = driver;
@@ -57,28 +57,30 @@ public class Nutzungsubersicht {
 	}
 
 	// Hadeer 06-8-2019
-	public void Assert_Weekview_PUA() throws InterruptedException {
-		ElementActions.waitForElementToBePresent(driver, usageTab, 1, true);
-		Thread.sleep(8000);
+		public void Assert_Weekview_PUA() throws InterruptedException {
+			ElementActions.waitForElementToBePresent(driver, usageTab, 1, true);
+			Thread.sleep(8000);
 
-		Assertions.assertElementAttribute(driver, list_day_month_view, "size", "(939, 39)", 1, true);
-		Assertions.assertElementAttribute(driver, tagesübersichtTab, "text", "Tagesübersicht", 1, true);
+			Assertions.assertElementAttribute(driver, list_day_month_view, "size", "(939, 39)", 1, true);
+			Assertions.assertElementAttribute(driver, tagesübersichtTab, "text", "Tagesübersicht", 1, true);
 
-		ElementActions.click(driver, monatübersichtTab);
-		Assertions.assertElementAttribute(driver, monatübersichtTab, "text", "Monatübersicht", 1, true);
+			ElementActions.click(driver, monatübersichtTab);
+			Assertions.assertElementAttribute(driver, monatübersichtTab, "text", "Monatübersicht", 1, true);
 
-	}
+			Assertions.assertElementExists(driver, Tab_weekview, false); // assert that week_view Tab not exist
+		}
 
-	// Hadeer 06-8-2019
-	public void Assert_Weekview_MMO() throws InterruptedException {
-		ElementActions.waitForElementToBePresent(driver, usageTab, 1, true);
-		Thread.sleep(8000);
+		// Hadeer 06-8-2019
+		public void Assert_Weekview_MMO() throws InterruptedException {
+			ElementActions.waitForElementToBePresent(driver, usageTab, 1, true);
+			Thread.sleep(8000);
 
-		Assertions.assertElementAttribute(driver, list_day_month_view, "size", "(939, 39)", 1, true);
-		Assertions.assertElementAttribute(driver, tagesübersichtTab, "text", "Tagesübersicht", 1, true);
+			//Assertions.assertElementAttribute(driver, list_day_month_view, "size", "(939, 39)", 1, true);
+			Assertions.assertElementAttribute(driver, tagesübersichtTab, "text", "Tagesübersicht", 1, true);
 
-		ElementActions.click(driver, monatübersichtTab);
-		Assertions.assertElementAttribute(driver, monatübersichtTab, "text", "Monatübersicht", 1, true);
-	}
-
+			ElementActions.click(driver, monatübersichtTab);
+			Assertions.assertElementAttribute(driver, monatübersichtTab, "text", "Monatübersicht", 1, true);
+		
+			Assertions.assertElementExists(driver, Tab_weekview, false); // assert that week_view Tab not exist
+		}
 }

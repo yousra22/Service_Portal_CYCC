@@ -1,9 +1,0 @@
-
-################################################################################################################################################
-Starting Execution:	[2 out of 2] test cases in the current suite
-Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_KunderFlags_Feilds]
-################################################################################################################################################
-[ReportManager] Successfully created attachment [Screenshot - 1562831486963_assert_KunderFlags_Feilds_identifyUniqueElement_failed] @11-07-2019 09:51:27.0060 AM
-[ReportManager] [identifyUniqueElement] failed. With the following test data [zero elements found matching this locator [By.id: exampleInputEmail3].]. @11-07-2019 09:51:28.0008 AM
-[ReportManager] Element Action [switchToDefaultContent] successfully performed. @11-07-2019 09:51:28.0189 AM
-[ReportManager] Successfully created attachment [Animated Gif - assert_KunderFlags_Feilds] @11-07-2019 09:51:29.0873 AM

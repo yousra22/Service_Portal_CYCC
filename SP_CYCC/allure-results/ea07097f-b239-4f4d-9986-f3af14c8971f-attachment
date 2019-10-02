@@ -1,9 +1,0 @@
-
-################################################################################################################################################
-Starting Execution:	[2 out of 2] test cases in the current suite
-Test Method:		[SP_CYCC.MSISDN_Info_Test.assert_NeueSuche_link]
-################################################################################################################################################
-[ReportManager] Browser Action [navigateToURL] successfully performed. With the following test data [https://ecycc8.stweb.elabs.svcs.hpe.com/cycc/serviceportal/getCustomerType.do?MSISDN=491620491952&clearsession=true]. @10-07-2019 11:48:15.0880 AM
-[ReportManager] Element Action [isElementDisplayed] successfully performed. @10-07-2019 11:48:17.0363 AM
-[ReportManager] Element Action [switchToDefaultContent] successfully performed. @10-07-2019 11:48:17.0432 AM
-[ReportManager] Successfully created attachment [Animated Gif - assert_NeueSuche_link] @10-07-2019 11:48:19.0397 AM
