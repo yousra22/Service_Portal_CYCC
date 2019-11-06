@@ -1,7 +1,6 @@
 ###################################################
 ##### Service Portal CYCC properties 16-9
 ###################################################
-testDataPath=./src/test/resources/TestDataFiles/TestData.xlsx
 sessionTimer=29:59  
 neueSuche_URL=cycc/serviceportal/callyaCustomerInfo.do
 SuccessMSG_wunschtarif_tab=Booking of offer '400 Min/SMS, 400 MB' was successful.

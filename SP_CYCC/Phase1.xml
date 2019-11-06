@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<suite name="Phase1_suite" verbose="1">
+	<test name="Phase1_test">
+		<classes>
+			<class name="SP_CYCC.NachrichtSenden_Test">
+				<methods>
+					<include
+						name="assert_NachrichtSenden_checkboxSMS_Selectable" />
+				<!--  	<include
+						name="assert_NachrichtSenden_checkboxAppPush_Selectable" />
+					<include
+						name="assert_NachrichtSenden_ConfiguredMessage_Displayed" /> -->
+				</methods>
+			</class>
+<!-- 
+			<class name="SP_CYCC.PersonlicheDaten_Test">
+				<methods>
+					<include
+						name="assert_PersonlicheDaten_Zahlungsubersicht_Tabs_Displayed" />
+				</methods>
+			</class>
+
+			<class name="SP_CYCC.MSISDNInfo_Test">
+				<methods>
+					<include name="assert_SessionTimer_dispalyed" />
+					<include name="assert_NeueSuche_link_navigation" />
+				</methods>
+			</class>
+ -->
+		</classes>
+	</test>
+</suite>

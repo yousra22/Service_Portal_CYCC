@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Phase1_suite" verbose="1">
+	<test name="Phase1_test">
+		<classes>
+			<class name="SP_CYCC.NachrichtSenden_Test">
+				<methods>
+					<include name="checkReport" />
+				</methods>
+			</class>
+
+		</classes>
+	</test>
+</suite>

@@ -12,7 +12,8 @@
 	<properties>
 	 	
 		<!-- Make sure you point to the latest version: https://bintray.com/mohabmohie/SHAFT/SHAFT_Engine/_latestVersion -->
-		<shaft_engine.version>2.3.20180305</shaft_engine.version>
+		<!-- <shaft_engine.version>2.3.20180305</shaft_engine.version>-->
+		<shaft_engine.version>2.4.20180326</shaft_engine.version>
 
 		<!-- SHAFT_Engine Properties and other property files are read from the below location -->
 		<propertiesFolderPath>src/test/resources/Properties/</propertiesFolderPath>

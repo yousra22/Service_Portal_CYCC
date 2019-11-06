@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Phase2" verbose="1">
+	<test name="Phase2">
+		<classes>
+			<class name="SP_CYCC.BalanceTransfers_Test">
+				<methods>
+					<include
+						name="assert_BalanceTransfers_Fields" />
+				</methods>
+			</class>
+
+			<class name="SP_CYCC.MSISDNInfo_Test">
+				<methods>
+					<include name="assert_Prepaid_ident_Info_empty" />
+					<include name="assert_SpecialInstruction_ButtonNotClickable" />
+					<include name="assert_SpecialInstructions_Popup_Displayed" />
+					<include name="assert_CancelledCustomer_SIMinfo_Displayed" />
+					<include name="AssertStatusforValenciaCustomerIsCancelled" />
+					<include name="assert_GensisMSISDN_link" />
+					<include name="assert_MSISDN_link" />						
+				</methods>
+			</class>
+			
+			<class name="SP_CYCC.CheckMSISDN_Test">
+				<methods>
+					<include
+						name="assert_MSISDNAbrufen_button_HintText()" />
+				</methods>
+			</class>
+
+		</classes>
+	</test>
+</suite>
